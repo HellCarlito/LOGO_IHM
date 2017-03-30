@@ -1,3 +1,4 @@
+package model;
   /* {author=Groupe 5, version=2017}*/
 
 import java.util.Date;
@@ -5,7 +6,7 @@ import java.util.Date;
 /** 
  *  Cette classe definit les differentes tentatives d'exercice des eleves.
  *  Cette classe va permettre d'obtenir le nombre ainsi que la date de la tentative.
- *  On pourra egalement obtenir toutes les informations sur l'exercice, l'évaluation et le commentaire faite sur la tentative ainsi que les supprimer.
+ *  On pourra egalement obtenir toutes les informations sur l'exercice, l'ï¿½valuation et le commentaire faite sur la tentative ainsi que les supprimer.
  *  Il est egalement possible ajouter et supprimer des actions.
  */
 public class Tentative

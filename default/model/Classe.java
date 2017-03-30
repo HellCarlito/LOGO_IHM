@@ -1,3 +1,4 @@
+package model;
   /* {author=Groupe 5, version=2017}*/
 
 /** 
@@ -17,7 +18,7 @@ public class Classe
   /** 
    *  Constructeur de classe, une classe possede un nom et l'enseignant associee.
    *  @param nom : correspond au nom de la classe
-   *  @param enseignantClasse : représente l'enseignant en tant que tel (nom, prénom)
+   *  @param enseignantClasse : reprï¿½sente l'enseignant en tant que tel (nom, prï¿½nom)
    */
   public void Classe(String nom, Enseignant enseignantClasse)
   {
@@ -26,7 +27,7 @@ public class Classe
 
   /** 
    *  Retourne le nom de la classe.
-   *  @return une chaine de caractère correspondant au nom de la classe
+   *  @return une chaine de caractï¿½re correspondant au nom de la classe
    */
   public String getNomClasse()
   {
@@ -35,7 +36,7 @@ public class Classe
 
   /** 
    *  Ajoute un eleve dans la classe.
-   *  @param eleve : représente l'élève en tant que tel (nom, prénom, classe)
+   *  @param eleve : reprï¿½sente l'ï¿½lï¿½ve en tant que tel (nom, prï¿½nom, classe)
    */
   public void ajouterEleve(Eleve eleve)
   {
@@ -45,7 +46,7 @@ public class Classe
   /** 
    *  Ajoute un exercice a la classe. 
    *  Il ne faut pas ajouter deux fois le meme exercice.
-   *  @param exercice : représente un exercice en tant que tel (nom, tortue, image)
+   *  @param exercice : reprï¿½sente un exercice en tant que tel (nom, tortue, image)
    */
   public void ajouterExercice(Exercice exercice)
   {
@@ -55,7 +56,7 @@ public class Classe
   /** 
    *  Supprime un exercice a la classe. 
    *  On peut supprimer un exercice seulement s'il n'y a pas deja de tentative.
-   *  @param exercice : représente un exercice en tant que tel (nom, tortue, image)
+   *  @param exercice : reprï¿½sente un exercice en tant que tel (nom, tortue, image)
    */
   public void supprimerExercice(Exercice exercice)
   {
@@ -64,7 +65,7 @@ public class Classe
 
   /** 
    *  Retourne l'enseignant de la classe.
-   *  @return toutes les données de l'enseignant (nom, prénom, liste de ses classes)
+   *  @return toutes les donnï¿½es de l'enseignant (nom, prï¿½nom, liste de ses classes)
    */
   public Enseignant getEnseignant()
   {

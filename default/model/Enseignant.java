@@ -1,3 +1,4 @@
+package model;
 import java.util.ArrayList;
 /** 
  *  Cette classe va permettre la gestion des enseignants et de leurs classes respectives. 

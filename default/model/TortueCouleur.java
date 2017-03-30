@@ -1,3 +1,4 @@
+package model;
  
 /**
  * Tortue LOGO capable d'ecrire en couleur

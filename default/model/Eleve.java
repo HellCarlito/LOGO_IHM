@@ -1,3 +1,4 @@
+package model;
  /* {author=Groupe 5, version=2017}*/
 
 /** 
@@ -18,9 +19,9 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Creation d'un eleve. L'eleve aura un nom, un prenom et la classe a laquelle l'eleve est associe.
-   *  @param nomEleve : représente le nom de l'élève 
-   *  @param prenomEleve : représente le prénom de l'élève
-   *  @param classeEleve : représente la classe dans laquelle est l'élève
+   *  @param nomEleve : reprï¿½sente le nom de l'ï¿½lï¿½ve 
+   *  @param prenomEleve : reprï¿½sente le prï¿½nom de l'ï¿½lï¿½ve
+   *  @param classeEleve : reprï¿½sente la classe dans laquelle est l'ï¿½lï¿½ve
    */
   public void Eleve(String nomEleve, String prenomEleve, Classe classeEleve)
   {
@@ -29,7 +30,7 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Retourne la classe de l'eleve
-   *  @return tous les éléments d'une classe (nom, enseignant, liste des élèves)
+   *  @return tous les ï¿½lï¿½ments d'une classe (nom, enseignant, liste des ï¿½lï¿½ves)
    */
   public Classe getClasse()
   {
@@ -38,7 +39,7 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Ajouter une tentative pour un exercice.
-   *  @param uneTentative : représente une tentative en tant que tel (date, exercice, évaluation et commentaire)
+   *  @param uneTentative : reprï¿½sente une tentative en tant que tel (date, exercice, ï¿½valuation et commentaire)
    */
   public void addTentative(Tentative uneTentative)
   {

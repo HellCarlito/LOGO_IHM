@@ -1,3 +1,4 @@
+package model;
   /* {author=Groupe 5, version=2017}*/
 
 /** 
@@ -16,8 +17,8 @@ public abstract class Utilisateur
 
   /** 
    *  Construit un utilisateur avec son nom et son prenom
-   *  @param nom : correspond au nom de l'utilisateur (soit l'enseignant soit l'élève)
-   *  @param prenom : correspond au prénom de l'utilisateur (soit l'enseignant soit l'élève)
+   *  @param nom : correspond au nom de l'utilisateur (soit l'enseignant soit l'ï¿½lï¿½ve)
+   *  @param prenom : correspond au prï¿½nom de l'utilisateur (soit l'enseignant soit l'ï¿½lï¿½ve)
    */
   public void Utilisateur(String nom, String prenom)
   {

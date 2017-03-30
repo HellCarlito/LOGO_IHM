@@ -1,3 +1,4 @@
+package model;
 import javax.swing.*;
 
 
@@ -13,7 +14,7 @@ public class Exercice
   private String nomExercice;
   // type de tortue utilise pour effectuer l'exercice (tortue classique, couleur ou rapide).
   private TortueG Tortue;
-  // image de l'exercice à reproduire
+  // image de l'exercice ï¿½ reproduire
   private Icon imageExercice;
 
   /** 

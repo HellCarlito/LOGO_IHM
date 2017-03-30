@@ -1,3 +1,4 @@
+package model;
   /* {author=Groupe 5, version=2017}*/
 
 /** 
@@ -15,7 +16,7 @@ public class Actions
 
   /** 
    *  Le constructeur associe le code avec l'image correspondante.
-   *  @param code : représente une chaine de caractère qui correspond à l'action effectuée
+   *  @param code : reprï¿½sente une chaine de caractï¿½re qui correspond ï¿½ l'action effectuï¿½e
    */
   public void Action(String code)
   {
@@ -24,7 +25,7 @@ public class Actions
 
   /** 
    *  Retourne le code d'une action.
-   *  @return une chaine de caractère correspondant à l'action faite
+   *  @return une chaine de caractï¿½re correspondant ï¿½ l'action faite
    */
   public String getCodeAction()
   {
@@ -33,7 +34,7 @@ public class Actions
 
   /** 
    *  Retourne le type de la tortue associee a l'action.
-   *  @return le type de la tortue utilisé pour faire l'action
+   *  @return le type de la tortue utilisï¿½ pour faire l'action
    */
   public TortueG getMaTortue()
   {
@@ -49,9 +50,9 @@ public class Actions
   }
 
   /** 
-   *  Redéfinition de la methode toString()
+   *  Redï¿½finition de la methode toString()
    *  Retourne l'action sous forme de texte. 
-   *  @return une chaine de caractère 
+   *  @return une chaine de caractï¿½re 
    */
   public String toString()
   {

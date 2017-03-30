@@ -1,8 +1,9 @@
+package model;
 /**
 * La tortue du programme LOGO. Graphique !
 *
 * @author Patrick Girard
-* @version février 2010
+* @version fï¿½vrier 2010
 */
 public class TortueG {
     // Position de la tortue
@@ -27,8 +28,8 @@ public class TortueG {
 
     /**
     * Constructeur
-    * Initialise la direction à la valeur 3 (vers le haut), la position en 0,0
-    * et la couleur à "black"
+    * Initialise la direction ï¿½ la valeur 3 (vers le haut), la position en 0,0
+    * et la couleur ï¿½ "black"
     */
     public TortueG() {
         CanvasTortue.reset();
@@ -36,7 +37,7 @@ public class TortueG {
     }
     
     /**
-     * Efface le canvas et réinitialise la tortue à sa position de depart
+     * Efface le canvas et rï¿½initialise la tortue ï¿½ sa position de depart
      *
      */
     public void reset() {
@@ -54,9 +55,9 @@ public class TortueG {
     }
 
     /**
-     * Méthode permettant à la tortue d'avancer dans la direction fixée
-     * de 0 à 3, de l'Est vers le Nord
-     * La méthode réaffiche la tortue après le mouvement
+     * Mï¿½thode permettant ï¿½ la tortue d'avancer dans la direction fixï¿½e
+     * de 0 ï¿½ 3, de l'Est vers le Nord
+     * La mï¿½thode rï¿½affiche la tortue aprï¿½s le mouvement
      * et trace une ligne si elle est en mode trace
      */
     public void avancer() {
@@ -81,8 +82,8 @@ public class TortueG {
     }
 
     /**
-     * Méthode permettant de tourner, dans le sens des aiguilles d'une montre
-     * La méthode réaffiche la tortue après le mouvement
+     * Mï¿½thode permettant de tourner, dans le sens des aiguilles d'une montre
+     * La mï¿½thode rï¿½affiche la tortue aprï¿½s le mouvement
      */
     public void tourner() {
         direction++;
@@ -92,12 +93,12 @@ public class TortueG {
     }
 
     /**
-     * Méthode permettant de tracer ou non
-     * Remarque : cette implémentation n'est pas correcte : elle ne garantit pas
-     * un appel correct des méthodes ; on peut appeler deux fois de suite
+     * Mï¿½thode permettant de tracer ou non
+     * Remarque : cette implï¿½mentation n'est pas correcte : elle ne garantit pas
+     * un appel correct des mï¿½thodes ; on peut appeler deux fois de suite
      * tracer(true) par exemple
      *
-     * @param  mode   booleen représentant le mode de trace (vrai ou faux)
+     * @param  mode   booleen reprï¿½sentant le mode de trace (vrai ou faux)
      */
     public void tracer(boolean mode) {
         trace = mode;
@@ -133,7 +134,7 @@ public class TortueG {
     }
     
     /**
-     * Accesseur de la coordonnée en X
+     * Accesseur de la coordonnï¿½e en X
      *
      * @return x
      */
@@ -142,7 +143,7 @@ public class TortueG {
     }
     
     /**
-     * Accesseur de la coordonnée en Y
+     * Accesseur de la coordonnï¿½e en Y
      *
      * @return y
      */

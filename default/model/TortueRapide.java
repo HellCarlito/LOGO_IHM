@@ -1,3 +1,4 @@
+package model;
 
 /**
  * Tortue LOGO capable de faire de la vitesse
@@ -11,7 +12,7 @@ public class TortueRapide extends TortueG
     private int vitesse;
 
     /**
-     * Constructeur, initialisation à 1 de la vitesse
+     * Constructeur, initialisation ï¿½ 1 de la vitesse
      */
     public TortueRapide()
     {
