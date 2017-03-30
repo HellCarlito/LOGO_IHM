@@ -1,38 +1,38 @@
 /** 
- *  Cette classe va gérer les utilisateurs, qu’ils soient des enseignants ou des élèves. Cette classe est une classe abstraite.
+ *  Cette classe va gerer les utilisateurs, qu'ils soient des enseignants ou des eleves.
+ *  Cette classe est une classe abstraite.
  */
-public class Utilisateur {
+public abstract class Utilisateur
+{
   /* {author=Groupe 5, version=2017}*/
 
 
-  /** 
-   *   Il s’agit du nom de l’utilisateur
-   */
+  // nom de l'utilisateur
   private String nom;
-
-  /** 
-   *   Il s’agit du prenom de l’utilisateur
-   */
+  //prenom de l'utilisateur
   private String prenom;
 
   /** 
-   *  Construit un utilisateur avec son nom et son prénom
+   *  Construit un utilisateur avec son nom et son prenom
    */
-  public void Utilisateur( nom,  prenom) {
+  public void Utilisateur(String nom, String prenom)
+  {
+	  
   }
 
   /** 
-   *  Retourne le nom de l’utilisateur
+   *  Retourne le nom de l'utilisateur
    */
-  public String getNom() {
-  return null;
+  public String getNom()
+  {
+	  return null;
   }
 
   /** 
-   *  Retourne le prenom de l’utilisateur
+   *  Retourne le prenom de l'utilisateur
    */
-  public String getPrenom() {
-  return null;
+  public String getPrenom()
+  {
+	  return null;
   }
-
 }
