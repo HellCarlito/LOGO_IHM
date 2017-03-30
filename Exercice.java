@@ -19,6 +19,10 @@ public class Exercice
   /** 
    *  Constructeur de la classe Exercice.
    *  Un exercice possede un nom, un type de tortue ainsi qu'une image.
+   *  
+   *  @param nomExercice correspond au nom de l'exercice
+   *  @param maTortue correspond au type de tortue utilisee pour l'exercice
+   *  @param imageExercice correspond au resultat de l'exercice souhaitee
    */
   public void Exercice(String nomExercice, TortueG maTortue, Icon imageExercice)
   {
@@ -27,6 +31,8 @@ public class Exercice
 
   /** 
    *  Retourne le nom de l'exercice.
+   *  
+   *  @return retourne le nom de l'exercice
    */
   public String getNomExercice()
   {
