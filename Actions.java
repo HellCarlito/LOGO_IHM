@@ -1,7 +1,8 @@
 /** 
  *  Cette classe va gerer toutes les actions faites par l'eleve (une image, un code ainsi qu'un commentaire).
  */
-public class Actions {
+public class Actions
+{
   /* {author=Groupe 5, version=2017}*/
 
   //Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
@@ -12,7 +13,7 @@ public class Actions {
   /** 
    *  Le constructeur associe le code avec l'image correspondante.
    */
-  public void Action(code)
+  public void Action(String code)
   {
 	  
   }
