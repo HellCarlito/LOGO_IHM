@@ -2,7 +2,7 @@
 * La tortue du programme LOGO. Graphique !
 *
 * @author Patrick Girard
-* @version f√©vrier 201
+* @version fÈvrier 2010
 */
 public class TortueG {
     // Position de la tortue
@@ -27,8 +27,8 @@ public class TortueG {
 
     /**
     * Constructeur
-    * Initialise la direction ÀÜ la valeur 3 (vers le haut), la position en 0,0
-    * et la couleur ÀÜ "black"
+    * Initialise la direction ‡ la valeur 3 (vers le haut), la position en 0,0
+    * et la couleur ‡ "black"
     */
     public TortueG() {
         CanvasTortue.reset();
@@ -36,7 +36,7 @@ public class TortueG {
     }
     
     /**
-     * Efface le canvas et r√©initialise la tortue ÀÜ sa position de depart
+     * Efface le canvas et rÈinitialise la tortue ‡ sa position de depart
      *
      */
     public void reset() {
@@ -54,9 +54,9 @@ public class TortueG {
     }
 
     /**
-     * M√©thode permettant ÀÜ la tortue d'avancer dans la direction fix√©e
-     * de 0 ÀÜ 3, de l'Est vers le Nord
-     * La m√©thode r√©affiche la tortue apr¬ès le mouvement
+     * MÈthode permettant ‡ la tortue d'avancer dans la direction fixÈe
+     * de 0 ‡ 3, de l'Est vers le Nord
+     * La mÈthode rÈaffiche la tortue aprËs le mouvement
      * et trace une ligne si elle est en mode trace
      */
     public void avancer() {
@@ -81,8 +81,8 @@ public class TortueG {
     }
 
     /**
-     * M√©thode permettant de tourner, dans le sens des aiguilles d'une montre
-     * La m√©thode r√©affiche la tortue apr¬ès le mouvement
+     * MÈthode permettant de tourner, dans le sens des aiguilles d'une montre
+     * La mÈthode rÈaffiche la tortue aprËs le mouvement
      */
     public void tourner() {
         direction++;
@@ -92,12 +92,12 @@ public class TortueG {
     }
 
     /**
-     * M√©thode permettant de tracer ou non
-     * Remarque : cette impl√©mentation n'est pas correcte : elle ne garantit pas
-     * un appel correct des m√©thodes ; on peut appeler deux fois de suite
+     * MÈthode permettant de tracer ou non
+     * Remarque : cette implÈmentation n'est pas correcte : elle ne garantit pas
+     * un appel correct des mÈthodes ; on peut appeler deux fois de suite
      * tracer(true) par exemple
      *
-     * @param  mode   booleen repr√©sentant le mode de trace (vrai ou faux)
+     * @param  mode   booleen reprÈsentant le mode de trace (vrai ou faux)
      */
     public void tracer(boolean mode) {
         trace = mode;
@@ -133,7 +133,7 @@ public class TortueG {
     }
     
     /**
-     * Accesseur de la coordonn√©e en X
+     * Accesseur de la coordonnÈe en X
      *
      * @return x
      */
@@ -142,7 +142,7 @@ public class TortueG {
     }
     
     /**
-     * Accesseur de la coordonn√©e en Y
+     * Accesseur de la coordonnÈe en Y
      *
      * @return y
      */

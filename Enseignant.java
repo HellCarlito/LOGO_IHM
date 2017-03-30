@@ -17,6 +17,9 @@ public class Enseignant extends Utilisateur
   /** 
    *  Creation d'un enseignant.
    *  Chaque enseignant possede un nom, un prenom
+   *  
+   *  @param nom correspond au nom de l'enseignant
+   *  @param prenom correspond au prenom de l'enseignant
    */
   public void Enseignant(String nom, String prenom)
   {
@@ -28,6 +31,8 @@ public class Enseignant extends Utilisateur
    *  Verifier que la classe n'existe pas deja.
    *  Si oui, on n'ajoute pas la classe.
    *  Si non, on ajoute la classe.
+   *  
+   *  @param classe correspond a une classe donnee
    */
   public void ajouterClasse(Classe classe)
   {
@@ -36,6 +41,8 @@ public class Enseignant extends Utilisateur
 
   /** 
    *  Supprimer une classe d'eleves a un enseignant.
+   *  
+   *  @param classe correspond a une classe donnee
    */
   public void supprimerClasse(Classe classe)
   {
