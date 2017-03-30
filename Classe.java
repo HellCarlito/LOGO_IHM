@@ -26,6 +26,7 @@ public class Classe
 
   /** 
    *  Retourne le nom de la classe.
+   *  @return une chaine de caractère correspondant au nom de la classe
    */
   public String getNomClasse()
   {
@@ -63,6 +64,7 @@ public class Classe
 
   /** 
    *  Retourne l'enseignant de la classe.
+   *  @return toutes les données de l'enseignant (nom, prénom, liste de ses classes)
    */
   public Enseignant getEnseignant()
   {
