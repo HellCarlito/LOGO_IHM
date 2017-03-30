@@ -1,3 +1,5 @@
+  /* {author=Groupe 5, version=2017}*/
+
 import java.util.Date;
 
 /** 
@@ -8,10 +10,10 @@ import java.util.Date;
  */
 public class Tentative
 {
-  /* {author=Groupe 5, version=2017}*/
-
-
-  // date de la tentative realise par l'eleve
+/**
+ * Attributs
+ */
+	// date de la tentative realise par l'eleve
   private Date dateTentative;
   // exercice associe a la tentative
   private Exercice exercice;
