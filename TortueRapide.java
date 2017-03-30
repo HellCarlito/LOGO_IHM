@@ -11,7 +11,7 @@ public class TortueRapide extends TortueG
     private int vitesse;
 
     /**
-     * Constructeur, initialisation ˆ 1 de la vitesse
+     * Constructeur, initialisation à 1 de la vitesse
      */
     public TortueRapide()
     {
