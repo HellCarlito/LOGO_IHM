@@ -8,7 +8,7 @@ public class Actions
   //Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
   private String codeAction;
   // correspond a la tortue utilisee pour faire l'exercice. 
-  private maTortue TortueG;
+  private TortueG maTortue;
 
   /** 
    *  Le constructeur associe le code avec l'image correspondante.
