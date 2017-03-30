@@ -3,7 +3,7 @@
  * Tortue LOGO capable de faire de la vitesse
  * 
  * @author Patrick Girard 
- * @version fevrier 2017
+ * @version fevrier 2017 
  */
 public class TortueRapide extends TortueG
 {

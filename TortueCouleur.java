@@ -7,7 +7,7 @@
  *  
  * @author Patrick Girard 
  * @version fevrier 2017
- */
+ */ 
 
 
 public class TortueCouleur extends TortueG {
