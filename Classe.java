@@ -1,11 +1,14 @@
+  /* {author=Groupe 5, version=2017}*/
+
 /** 
  *   Gestion de classes d'eleves. On va pouvoir obtenir le nom de la classe, les eleves qu'elle contient, ainsi que les noms et prenoms de ces eleves. 
  *   On pourra egalement ajouter et supprimer un exercice.
  */
 public class Classe
 {
-  /* {author=Groupe 5, version=2017}*/
-	
+/**
+ * Attributs	
+ */
   //nom de la classe
   private String nomClasse;
   //L'enseignant associee a la classe
