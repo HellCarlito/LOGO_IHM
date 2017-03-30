@@ -1,10 +1,13 @@
+  /* {author=Groupe 5, version=2017}*/
+
 /** 
  *  Cette classe va gerer toutes les actions faites par l'eleve (une image, un code ainsi qu'un commentaire).
  */
 public class Actions
 {
-  /* {author=Groupe 5, version=2017}*/
-
+	/**
+	 * Attributs
+	*/
   //Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
   private String codeAction;
   // correspond a la tortue utilisee pour faire l'exercice. 
@@ -12,6 +15,7 @@ public class Actions
 
   /** 
    *  Le constructeur associe le code avec l'image correspondante.
+   *  @param code : représente une chaine de caractère qui correspond à l'action effectuée
    */
   public void Action(String code)
   {
