@@ -1,58 +1,64 @@
-import java.util.Vector;
-
 /** 
- *   Gestion de classes d’élèves. On va pouvoir obtenir le nom de la classe, les élèves qu’elle contient, ainsi que les noms et prénoms de ces élèves. On pourra également ajouter et supprimer un exercice.
+ *   Gestion de classes d'eleves. On va pouvoir obtenir le nom de la classe, les eleves qu'elle contient, ainsi que les noms et prenoms de ces eleves. 
+ *   On pourra egalement ajouter et supprimer un exercice.
  */
-public class Classe {
+public class Classe
+{
   /* {author=Groupe 5, version=2017}*/
-
-
-  /** 
-   *  Il s’agit du nom de la classe
-   */
+	
+  //nom de la classe
   private String nomClasse;
+  //L'enseignant associee a la classe
+  private Enseignant enseignant;
 
   /** 
-   *  L’enseignant associé à la classe
+   *  Constructeur de classe, une classe possede un nom et l'enseignant associee.
    */
-  private String enseignant;
-
-  /** 
-   *  Constructeur de classe, une classe possède un nom et l’enseignant associé.
-   */
-  public void Classe( nomClasse,  enseignant) {
+  public void Classe(String nom, Enseignant enseignantClasse)
+  {
+	  
   }
 
   /** 
    *  Retourne le nom de la classe.
    */
-  public String getNomClasse() {
-  return null;
+  public String getNomClasse()
+  {
+	  return null;
   }
 
   /** 
-   *  Ajoute un élève dans la classe.
+   *  Ajoute un eleve dans la classe.
    */
-  public void ajouterEleve( eleve) {
+  public void ajouterEleve(Eleve eleve)
+  {
+	  
   }
 
   /** 
-   *  Ajoute un exercice à la classe. Il ne faut pas ajouter deux fois le même  exercice.
+   *  Ajoute un exercice a la classe. 
+   *  Il ne faut pas ajouter deux fois le meme exercice.
    */
-  public void ajouterExercice( exercice) {
+  public void ajouterExercice(Exercice exercice)
+  {
+	  
   }
 
   /** 
-   *  Supprime un exercice à la classe. On peut supprimer un exercice seulement s’il n’y a pas déjà de tentative.
+   *  Supprime un exercice a la classe. 
+   *  On peut supprimer un exercice seulement s'il n'y a pas deja de tentative.
    */
-  public void supprimerExercice( exercice) {
+  public void supprimerExercice(Exercice exercice)
+  {
+	  
   }
 
   /** 
-   *  Retourne l’enseignant de la classe.
+   *  Retourne l'enseignant de la classe.
    */
-  public enseignant getEnseignant() {
-  return null;
+  public Enseignant getEnseignant()
+  {
+	  return null;
   }
 
 }
