@@ -24,6 +24,7 @@ public class Actions
 
   /** 
    *  Retourne le code d'une action.
+   *  @return une chaine de caractère correspondant à l'action faite
    */
   public String getCodeAction()
   {
@@ -32,6 +33,7 @@ public class Actions
 
   /** 
    *  Retourne le type de la tortue associee a l'action.
+   *  @return le type de la tortue utilisé pour faire l'action
    */
   public TortueG getMaTortue()
   {
@@ -49,6 +51,7 @@ public class Actions
   /** 
    *  Redéfinition de la methode toString()
    *  Retourne l'action sous forme de texte. 
+   *  @return une chaine de caractère 
    */
   public String toString()
   {
