@@ -1,53 +1,53 @@
-import java.util.Vector;
-
 /** 
- *  Cette classe va gérer toutes les actions faites par l’élève (une image, un code ainsi qu’un commentaire).
+ *  Cette classe va gerer toutes les actions faites par l'eleve (une image, un code ainsi qu'un commentaire).
  */
 public class Actions {
   /* {author=Groupe 5, version=2017}*/
 
-
-  /** 
-   *  Représente l’action sous forme de petite phrase correspondant au type d’action effectué par l’élève. 
-   */
+  //Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
   private String codeAction;
-
-  /** 
-   *  Correspond à la tortue utilisée pour faire l’exercice. 
-   */
+  // correspond a la tortue utilisee pour faire l'exercice. 
   private maTortue TortueG;
 
   /** 
-   *  Le constructeur associe le code avec l’image correspondante.
+   *  Le constructeur associe le code avec l'image correspondante.
    */
-  public void Action( code) {
+  public void Action(code)
+  {
+	  
   }
 
   /** 
-   *  Retourne le code d’une action.
+   *  Retourne le code d'une action.
    */
-  public String getCodeAction() {
-  return null;
+  public String getCodeAction()
+  {
+	  return null;
   }
 
   /** 
-   *  Retourne le type de la tortue associé à l’action.
+   *  Retourne le type de la tortue associee a l'action.
    */
-  public TortueG getMaTortue() {
-  return null;
+  public TortueG getMaTortue()
+  {
+	  return null;
   }
 
   /** 
    *  Permet de refaire une action.
    */
-  public void rejouerAction() {
+  public void rejouerAction()
+  {
+	  
   }
 
   /** 
-   *  Retourne l’action sous forme de texte. 
+   *  Red�finition de la methode toString()
+   *  Retourne l'action sous forme de texte. 
    */
-  public String toString() {
-  return null;
+  public String toString()
+  {
+	  return null;
   }
 
 }
