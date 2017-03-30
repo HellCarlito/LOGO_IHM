@@ -7,7 +7,7 @@ import java.awt.event.*;
  * avec un bouton permettant de la faire avancer
  * 
  * @author  Patrick Girard
- * @version février 2017
+ * @version fevrier 2017
  */
 public class TestCanvasTortue extends JFrame implements ActionListener 
 {
