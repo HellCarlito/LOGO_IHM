@@ -1,34 +1,40 @@
-import java.util.Vector;
-
 /** 
- *  Cette classe va permettre la gestion des élèves d’une classe et des tentatives qu’ils auront fait. On pourra voir les différentes tentatives de l’élève, et la classe à laquelle il est associé (si besoin, pouvoir également changer l’élève de classe).
+ *  Cette classe va permettre la gestion des eleves d'une classe et des tentatives qu'ils auront fait.
+ *  On pourra voir les differentes tentatives de l'eleve, et la classe a laquelle il est associe (si besoin, pouvoir egalement changer l'eleve de classe).
  */
-public class Eleve extends Utilisateur {
+public class Eleve extends Utilisateur
+{
   /* {author=Groupe 5, version=2017}*/
 
+	// le prenom de l'eleve
+	private String nom;
+	// le nom de l'eleve
+	private String prenom;
+	// la classe de l'eleve
+	private Classe classe;
 
   /** 
-   *   Classe auquel l’élève appartient.
+   *  Creation d'un eleve. L'eleve aura un nom, un prenom et la classe a laquelle l'eleve est associe.
    */
-  private Classe classe;
-
-  /** 
-   *  Création d’un élève. L’élève aura chacun un nom, un prénom et la classe à laquelle l’élève est associé.
-   */
-  public void Eleve( nom,  prenom,  Classe) {
+  public void Eleve(String nomEleve, String prenomEleve, Classe classeEleve)
+  {
+	  
   }
 
   /** 
-   *  Retourne la classe de l’élève.
+   *  Retourne la classe de l'eleve
    */
-  public String getClasse() {
-  return null;
+  public Classe getClasse()
+  {
+	  return null;
   }
 
   /** 
    *  Ajouter une tentative pour un exercice.
    */
-  public void addTentative( Tentative) {
+  public void addTentative(Tentative uneTentative)
+  {
+	  
   }
 
 }
