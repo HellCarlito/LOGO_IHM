@@ -29,6 +29,7 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Retourne la classe de l'eleve
+   *  @return tous les éléments d'une classe (nom, enseignant, liste des élèves)
    */
   public Classe getClasse()
   {
