@@ -1,39 +1,43 @@
-import java.util.Vector;
+import javax.swing.*;
+
 
 /** 
- *  Cette classe permet à l’enseignant de construire un exercice. Cette exercice pourra être utilisé par tous les élèves des classes de l’enseignant et par d’autres enseignants.
+ *  Cette classe permet a l'enseignant de construire un exercice.
+ *  Cette exercice pourra etre utilisee par tous les eleves des classes de l'enseignant et par d'autres enseignants.
  */
-public class Exercice {
+public class Exercice
+{
   /* {author=Groupe 5, version=2017}*/
 
-
-  /** 
-   *  Correspond au nom de l’exercice créé par l’enseignant.
-   */
+  // nom de l'exercice cree par l'enseignant.
   private String nomExercice;
-
-  /** 
-   *  Correspond au type de tortue utilisé pour effectuer l’exercice (tortue classique, couleur ou rapide).
-   */
+  // type de tortue utilise pour effectuer l'exercice (tortue classique, couleur ou rapide).
   private TortueG Tortue;
+  // image de l'exercice � reproduire
+  private Icon imageExercice;
 
   /** 
-   *  Constructeur de la classe Exercice. Un exercice possède un nom.
+   *  Constructeur de la classe Exercice.
+   *  Un exercice possede un nom, un type de tortue ainsi qu'une image.
    */
-  public void Exercice( nomExercice) {
+  public void Exercice(String nomExercice, TortueG maTortue, Icon imageExercice)
+  {
+	  
   }
 
   /** 
-   *  Retourne le nom de l’exercice.
+   *  Retourne le nom de l'exercice.
    */
-  public String getNomExercice() {
-  return null;
+  public String getNomExercice()
+  {
+	  return null;
   }
 
   /** 
-   *  Modifie un exercice (seulement si aucun élève ne l’a déjà fait).
+   *  Modifie un exercice (seulement si aucun eleve ne l'ai deja fait).
    */
-  public void setExercice() {
+  public void setExercice()
+  {
+	  
   }
-
 }
