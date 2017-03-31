@@ -17,11 +17,11 @@ public class SQLiteJDBCDriverConnection {
         Connection conn = null;
         try {
             // Parametre de la base de donnees
-            String url = "jdbc:sqlite:/home/carlito/Downloads/chinook.db";
+            String url = "jdbc:sqlite:C:/Users/yoline/Downloads/chinook.db";
             // Cree une connexion a la base de donnees
             conn = DriverManager.getConnection(url);
             
-            System.out.println("Connexion a SQLite établie.");
+            System.out.println("Connexion a SQLite Etablie.");
             
         } catch (SQLException e) {
             System.out.println(e.getMessage());
