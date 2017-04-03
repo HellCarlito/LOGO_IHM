@@ -50,6 +50,19 @@ public class ActionMenu extends JPanel{
 		
 		//Faire une boucle pour savoir si on se trouve sur le compte élève ou enseignant
 		//Afficher le menu en fonction du compte
-		
+	
+		// si c'est le menu de l'enseignant
+		this.add(boutonsMenuEnseignant);     
+        
+		// si c'est le menu de l'eleve
+		this.add(boutonsMenuEleve);      
 	}
+	
+	
+	public static void main(String[] args) {
+        JFrame test = new JFrame();
+        test.setContentPane(new ActionMenu());
+        test.setVisible(true);
+        test.pack();
+    }
 }
