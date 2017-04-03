@@ -20,7 +20,7 @@ public abstract class Utilisateur
    *  @param nom : correspond au nom de l'utilisateur (soit l'enseignant soit l'eleve)
    *  @param prenom : correspond au pr�nom de l'utilisateur (soit l'enseignant soit l'eleve)
    */
-  public void Utilisateur(String nom, String prenom)
+  public Utilisateur(String nom, String prenom)
   {
 	  this.nom=nom;
 	  this.prenom=prenom;
