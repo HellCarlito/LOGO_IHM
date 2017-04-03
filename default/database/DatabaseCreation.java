@@ -74,37 +74,35 @@ public class DatabaseCreation {
 			 * ALTER TABLES
 			 */
 			statement.executeUpdate("alter table AGIT_SUR add constraint FK_AGIT_SUR foreign key (ID_TORTUE)"
-					+ "references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table AGIT_SUR add constraint FK_AGIT_SUR2 foreign key (ID_ACTION)"
-					+ "references ACTION (ID_ACTION) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table CLASSE add constraint FK_SUIT foreign key (ID_ENSEIGANT)"
-					+ "references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table ELEVE add constraint FK_POSSEDE foreign key (ID_CLASSE)"
-					+ "references CLASSE (ID_CLASSE) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table EXERCICE add constraint FK_CREE foreign key (ID_ENSEIGANT)"
-					+ "references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table EXERCICE add constraint FK_UTILISE foreign key (ID_TORTUE)"
-					+ "references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_ASSOCIE foreign key (ID_EXERCICE)"
-					+ "references EXERCICE (ID_EXERCICE) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_CONTIENT foreign key (ID_ACTION)"
-					+ "references ACTION (ID_ACTION) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_EVALUE foreign key ()"
-					+ "references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-			
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_FAIT foreign key (ID_ELEVE)"
-					+ "references ELEVE (ID_ELEVE) on delete restrict on update restrict;");
-			
+					+ " references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
 
-			
+			statement.executeUpdate("alter table AGIT_SUR add constraint FK_AGIT_SUR2 foreign key (ID_ACTION)"
+					+ " references ACTION (ID_ACTION) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table CLASSE add constraint FK_SUIT foreign key (ID_ENSEIGANT)"
+					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table ELEVE add constraint FK_POSSEDE foreign key (ID_CLASSE)"
+					+ " references CLASSE (ID_CLASSE) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table EXERCICE add constraint FK_CREE foreign key (ID_ENSEIGANT)"
+					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table EXERCICE add constraint FK_UTILISE foreign key (ID_TORTUE)"
+					+ " references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table TENTATIVE add constraint FK_ASSOCIE foreign key (ID_EXERCICE)"
+					+ " references EXERCICE (ID_EXERCICE) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table TENTATIVE add constraint FK_CONTIENT foreign key (ID_ACTION)"
+					+ " references ACTION (ID_ACTION) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table TENTATIVE add constraint FK_EVALUE foreign key ()"
+					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
+
+			statement.executeUpdate("alter table TENTATIVE add constraint FK_FAIT foreign key (ID_ELEVE)"
+					+ " references ELEVE (ID_ELEVE) on delete restrict on update restrict;");
+
 			// statement.executeUpdate("create table person (id integer, name
 			// string)");
 			// statement.executeUpdate("insert into person values(1, 'leo')");
