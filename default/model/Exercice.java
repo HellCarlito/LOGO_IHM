@@ -16,6 +16,8 @@ public class Exercice
   private TortueG maTortue;
   // image de l'exercice a reproduire
   private Icon imageExercice;
+  // Id du professeur qui a fait l'exercice
+  private Enseignant prof;
 
   /** 
    *  Constructeur de la classe Exercice.
@@ -25,11 +27,12 @@ public class Exercice
    *  @param maTortue correspond au type de tortue utilisee pour l'exercice
    *  @param imageExercice correspond au resultat de l'exercice souhaitee
    */
-  public void Exercice(String nomExo, TortueG tortue, Icon imageExo)
+  public Exercice(String nomExo, TortueG tortue, Icon imageExo, Enseignant professeur)
   {
 	  nomExercice = nomExo;
 	  maTortue = tortue;
 	  imageExercice = imageExo;
+	  prof = professeur;
   }
 
   /** 
@@ -67,6 +70,10 @@ public class Exercice
    */
   public void setExercice(Icon imageExo)
   {
-	  imageExercice = imageExo;
+	  if (prof.getClasses().getEleve().getTentatives() == null){
+		  imageExercice = imageExo;
+	  } else {
+		  System.out.println("Impossible de modifier votre exercice, un eleve a deja fait une tentative !");
+	  }
   }
 }
