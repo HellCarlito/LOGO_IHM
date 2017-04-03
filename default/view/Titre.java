@@ -10,17 +10,18 @@ public class Titre extends JPanel
 	private Icon quitterIcon;
 	
 	public Titre(String monText){
-		JLabel monTitre = new JLabel(monText);
+		JLabel monTitre = new JLabel(monText,JLabel.CENTER);
 		quitterIcon = new ImageIcon(this.getClass().getResource("/pictures/quitter.png"));
 		retourMenuPrincipal = new JButton (quitterIcon);
-		this.setLayout(new GridLayout(1,2));
-		this.add(monTitre);
-		this.add(retourMenuPrincipal);
+		retourMenuPrincipal.setBackground(Color.white);
+		this.setLayout(new BorderLayout());
+		this.add(monTitre,BorderLayout.CENTER);
+		this.add(retourMenuPrincipal,BorderLayout.EAST);
 	}
 	
 	public static void main(String[] args) {
         JFrame test = new JFrame();
-        test.setContentPane(new Titre("bonjour"));
+        test.setContentPane(new Titre("Enseignant"));
         test.setVisible(true);
         test.pack();
     }
