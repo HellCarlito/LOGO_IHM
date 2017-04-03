@@ -7,8 +7,6 @@ import java.util.ArrayList;
 public class Enseignant extends Utilisateur
 {
   /* {author=Groupe 5, version=2017}*/
-	//l'id de l'enseignant
-	private int id;
 	// le prenom de l'enseignant
 	private String nom;
 	// le nom de l'enseignant
@@ -23,10 +21,9 @@ public class Enseignant extends Utilisateur
    *  @param nom correspond au nom de l'enseignant
    *  @param prenom correspond au prenom de l'enseignant
    */
-  public Enseignant(String monNom, String monPrenom,int monId)
+  public Enseignant(String monNom, String monPrenom)
   {
 	  super(monNom,monPrenom);
-	  this.id=monId;
   }
 
   /** 
