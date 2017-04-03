@@ -24,7 +24,8 @@ public class Enseignant extends Utilisateur
    */
   public void Enseignant(String nom, String prenom)
   {
-	  
+	  this.nom=nom;
+	  this.prenom=prenom;
   }
 
   /** 
@@ -37,7 +38,15 @@ public class Enseignant extends Utilisateur
    */
   public void ajouterClasse(Classe classe)
   {
-	  
+	  Boolean present=false;
+	  for(Classe uneClasse:this.getClasses()){
+		  if (uneClasse==classe){
+			  present=true;
+		  }
+	  }
+	  if (present==false){
+		  this.classes.add(classe);
+	  }
   }
 
   /** 
@@ -47,7 +56,15 @@ public class Enseignant extends Utilisateur
    */
   public void supprimerClasse(Classe classe)
   {
-	  
+	  this.classes.remove(classe);
   }
 
-}
+  /** 
+   *  retourne la liste des classes d'un enseignant
+   *  
+   */
+  public ArrayList<Classe> getClasses() {
+	return classes;
+  }
+
+	}
