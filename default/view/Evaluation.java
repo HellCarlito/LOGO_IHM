@@ -45,7 +45,7 @@ public class Evaluation extends JPanel{
 		// Pour récupérer ce qui a été saisi dans un JTextArea, 
 		//cela se fait via la méthode "String monJTextArea.getText()"
 		com = new JTextArea("Votre commentaire ..");
-		com.setEditable(false);
+		com.setEditable(true);
 		
 		//Instanciation des boutons
 		validerChoixEvaluation = new JButton("Valider l'evaluation");
