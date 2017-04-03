@@ -27,11 +27,11 @@ public class ExerciceInterface extends JPanel{
 		
 		//Ajout des Panels au Panel principal
 		exerciceInterface.add(realisationDessin);
-		//exerciceInterface.add(affichageCode);
+		//exerciceInterface.add(affichageCode); //récuperer le panel dans la classe Code
 		
 		//Ajout des Panels au sous-panel realisationDessin
-		//realisationDessin.add(dessins);
-		//realisationDessin.add(interfaceBoutons);
+		//realisationDessin.add(dessins); //récuperer le panel dans la classe DessinExercice
+		//realisationDessin.add(interfaceBoutons); //récuperer le panel dans la classe ZoneBouton
 		
 		this.add(exerciceInterface);
 	}
