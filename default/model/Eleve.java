@@ -10,7 +10,8 @@ import java.util.ArrayList;
  * l'eleve, et la classe a laquelle il est associe (si besoin, pouvoir egalement
  * changer l'eleve de classe).
  */
-public class Eleve extends Utilisateur {
+public class Eleve extends Utilisateur
+{
 	/**
 	 * Attributs
 	 */
@@ -21,7 +22,7 @@ public class Eleve extends Utilisateur {
 	// la classe de l'eleve
 	private Classe classe;
 	// variable qui stocke les tentatives de l'eleve
-	private ArrayList<Tentative> tentativeEleves;
+	private ArrayList<Tentative> tentativeEleve;
 
 	/**
 	 * Creation d'un eleve. L'eleve aura un nom, un prenom et la classe a
@@ -34,9 +35,9 @@ public class Eleve extends Utilisateur {
 	 * @param classeEleve
 	 *            : represente la classe dans laquelle est l'eleve
 	 */
-	public Eleve(String nomEleve, String prenomEleve, Classe classeEleve) {
-		this.nom = nomEleve;
-		this.prenom = prenomEleve;
+	public Eleve(String nomEleve, String prenomEleve, Classe classeEleve)
+	{
+		super(nomEleve,prenomEleve);
 		this.classe = classeEleve;
 	}
 
@@ -46,7 +47,8 @@ public class Eleve extends Utilisateur {
 	 * @return tous les elements d'une classe (nom, enseignant, liste des
 	 *         eleves)
 	 */
-	public Classe getClasse() {
+	public Classe getClasse()
+	{
 		return classe;
 	}
 
@@ -54,11 +56,11 @@ public class Eleve extends Utilisateur {
 	 * Ajouter une tentative pour un exercice.
 	 * 
 	 * @param uneTentative
-	 *            : represente une tentative en tant que tel (date, exercice,
-	 *            evaluation et commentaire)
+	 *            : represente une tentative en tant que tel (date, exercice,evaluation et commentaire)
 	 */
-	public void addTentative(Tentative uneTentative) {
-
+	public void addTentative(Tentative uneTentative)
+	{
+		this.tentativeEleve.add(uneTentative);
 	}
 
 	/**
@@ -66,8 +68,9 @@ public class Eleve extends Utilisateur {
 	 * 
 	 * @return un arrayList d'une tentative
 	 */
-	public ArrayList<Tentative> getTentativeEleves() {
-		return tentativeEleves;
+	public ArrayList<Tentative> getTentativeEleves()
+	{
+		return tentativeEleve;
 	}
 
 }
