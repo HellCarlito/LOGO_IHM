@@ -34,7 +34,7 @@ public class Eleve extends Utilisateur {
 	 * @param classeEleve
 	 *            : represente la classe dans laquelle est l'eleve
 	 */
-	public void Eleve(String nomEleve, String prenomEleve, Classe classeEleve) {
+	public Eleve(String nomEleve, String prenomEleve, Classe classeEleve) {
 		this.nom = nomEleve;
 		this.prenom = prenomEleve;
 		this.classe = classeEleve;
@@ -61,7 +61,11 @@ public class Eleve extends Utilisateur {
 
 	}
 
-	
+	/**
+	 * Retourne la tentative des eleves
+	 * 
+	 * @return un arrayList d'une tentative
+	 */
 	public ArrayList<Tentative> getTentativeEleves() {
 		return tentativeEleves;
 	}
