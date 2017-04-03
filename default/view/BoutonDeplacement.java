@@ -12,12 +12,16 @@ public class BoutonDeplacement extends JPanel
 	{
 		ecrireIcon = new ImageIcon(this.getClass().getResource("/pictures/ecrire.png"));
 		ecrire = new JButton (ecrireIcon);
+		ecrire.setBackground(Color.white);
 		nePasEcrireIcon = new ImageIcon(this.getClass().getResource("/pictures/nepasecrire.png"));
 		nePasEcrire = new JButton (nePasEcrireIcon);
+		nePasEcrire.setBackground(Color.white);
 		tournerIcon = new ImageIcon(this.getClass().getResource("/pictures/tourner.png"));
 		tourner = new JButton (tournerIcon);
+		tourner.setBackground(Color.white);
 		avancerIcon = new ImageIcon(this.getClass().getResource("/pictures/avancer.png"));
 		avancer = new JButton (avancerIcon);
+		avancer.setBackground(Color.white);
 		this.setLayout(new GridLayout (1,0));
 		this.add(ecrire);
 		this.add(nePasEcrire);
