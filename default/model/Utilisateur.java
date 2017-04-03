@@ -17,12 +17,13 @@ public abstract class Utilisateur
 
   /** 
    *  Construit un utilisateur avec son nom et son prenom
-   *  @param nom : correspond au nom de l'utilisateur (soit l'enseignant soit l'�l�ve)
-   *  @param prenom : correspond au pr�nom de l'utilisateur (soit l'enseignant soit l'�l�ve)
+   *  @param nom : correspond au nom de l'utilisateur (soit l'enseignant soit l'eleve)
+   *  @param prenom : correspond au pr�nom de l'utilisateur (soit l'enseignant soit l'eleve)
    */
   public void Utilisateur(String nom, String prenom)
   {
-	  
+	  this.nom=nom;
+	  this.prenom=prenom;
   }
 
   /** 
@@ -30,7 +31,7 @@ public abstract class Utilisateur
    */
   public String getNom()
   {
-	  return null;
+	  return this.nom;
   }
 
   /** 
@@ -38,6 +39,6 @@ public abstract class Utilisateur
    */
   public String getPrenom()
   {
-	  return null;
+	  return this.prenom;
   }
 }
