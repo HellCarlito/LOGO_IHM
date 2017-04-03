@@ -46,18 +46,30 @@ public class Classe
 	  return nomClasse;
   }
   
+  /**
+   * Retourne la liste des eleves present dans la classe
+   * @return une liste d'eleve
+   */
   public ArrayList<Eleve> getEleve()
   {
 	  ArrayList<Eleve> eleve = new ArrayList<Eleve>();
 	  return eleve;
   }
   
+  /**
+   * Retourne la liste des exercices pour la classe
+   * @return une liste d'exercice
+   */
   public ArrayList<Exercice> getExercice()
   {
 	  ArrayList<Exercice> exercice = new ArrayList<Exercice>();
 	  return exercice;
   }
   
+  /**
+   * Retourne la liste des tentatives de la classe
+   * @return une liste de tentative
+   */
   public ArrayList<Tentative> getTentative()
   {
 	  ArrayList<Tentative> tentative = new ArrayList<Tentative>();
