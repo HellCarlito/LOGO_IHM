@@ -19,7 +19,9 @@ public class Classe
   //Liste des eleves de la classe
   private ArrayList<Eleve> compositionClasse;
   //Liste des exercices de la classe
-  private ArrayList<Exercice> exercice;
+  private ArrayList<Exercice> exercices;
+  //Liste des tentatives de la classe
+  private ArrayList<Tentative> tentatives;
   //Nombre d'eleves dans la classe
   private int nbEleve;
 
@@ -43,6 +45,24 @@ public class Classe
   {
 	  return nomClasse;
   }
+  
+  public ArrayList<Eleve> getEleve()
+  {
+	  ArrayList<Eleve> eleve = new ArrayList<Eleve>();
+	  return eleve;
+  }
+  
+  public ArrayList<Exercice> getExercice()
+  {
+	  ArrayList<Exercice> exercice = new ArrayList<Exercice>();
+	  return exercice;
+  }
+  
+  public ArrayList<Tentative> getTentative()
+  {
+	  ArrayList<Tentative> tentative = new ArrayList<Tentative>();
+	  return tentative;
+  }
 
   /** 
    *  Ajoute un eleve dans la classe.
@@ -50,15 +70,15 @@ public class Classe
    */
   public void ajouterEleve(Eleve eleve)
   {
-	int n = 0; 
-	for (int i=1; i <= nbEleve; i++){
-		if ((Eleve(i).prenom = eleve.getPrenom()) && (Eleve(i).nom = eleve.getNom())){
-			n=n+1;
+	boolean isPresent = false; 
+	for (Eleve unEleve:this.getEleve()){
+		if (unEleve == eleve){
+			isPresent = true;
 		}
 	}
 	
-	if (n != nbEleve){
-		eleve = new Eleve();
+	if (isPresent = false){
+		this.compositionClasse.add(eleve);
 	}
 	else System.out.print("L'eleve existe deja dans cette classe ");
   }
@@ -70,22 +90,48 @@ public class Classe
    */
   public void ajouterExercice(Exercice exercice)
   {
-	  
+	  boolean isPresent = false; 
+		for (Exercice unExo:this.getExercice()){
+			if (unExo == exercice){
+				isPresent = true;
+			}
+		}
+		
+		if (isPresent = false){
+			this.exercices.add(exercice);
+		}
+		else System.out.print("L'eleve existe deja dans cette classe ");
   }
 
   /** 
    *  Supprime un exercice a la classe. 
    *  On peut supprimer un exercice seulement s'il n'y a pas deja de tentative.
-   *  @param exercice : repr�sente un exercice en tant que tel (nom, tortue, image)
+   *  @param exercice : represente un exercice en tant que tel (nom, tortue, image)
    */
   public void supprimerExercice(Exercice exercice)
   {
-	  
+	 boolean fait = false;
+	 for (Exercice unExo: this.getExercice())
+	 {
+		 for (Tentative uneTentative:this.getTentative())
+		 {
+			 if (uneTentative != null)
+			 {
+				 fait = true;
+			 }
+		 }
+	 }
+	 
+	 if (fait = false)
+	 {
+	  this.exercices.remove(exercice);
+	 }
+	 else System.out.print("L'exercice a deja ete effectue par des eleves. Il ne peut pas etre supprimer ! ");
   }
 
   /** 
    *  Retourne l'enseignant de la classe.
-   *  @return toutes les donn�es de l'enseignant (nom, pr�nom, liste de ses classes)
+   *  @return toutes les donnees de l'enseignant (nom, prenom, liste de ses classes)
    */
   public Enseignant getEnseignant()
   {
