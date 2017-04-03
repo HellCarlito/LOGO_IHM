@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * en specifiant un path vers cette base de donnees
  * @author Groupe 5
  */
-public class SQLiteJDBCDriverConnection {
+public class DatabaseConnection {
      /**
      * Connect to a sample database
      */
@@ -17,7 +17,7 @@ public class SQLiteJDBCDriverConnection {
         Connection conn = null;
         try {
             // Parametre de la base de donnees
-            String url = "jdbc:sqlite:C:/Users/yoline/Downloads/chinook.db";
+            String url = "jdbc:sqlite:/home/carlito/Downloads/chinook.db";
             // Cree une connexion a la base de donnees
             conn = DriverManager.getConnection(url);
             
