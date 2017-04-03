@@ -40,72 +40,81 @@ public class DatabaseCreation {
 
 			// Creation de la table Agit_sur
 			statement.executeUpdate("create table AGIT_SUR(ID_TORTUE numeric(8,0) not null,"
-					+ "ID_ACTION numeric(8,0) not null," + "primary key (ID_TORTUE, ID_ACTION));");
+					+ "ID_ACTION numeric(8,0) not null,"
+					+ "primary key (ID_TORTUE, ID_ACTION),"
+					+ "foreign key (ID_TORTUE)references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict,"
+					+ "foreign key (ID_ACTION) references ACTION (ID_ACTION)on delete restrict on update restrict);");
 
 			// Creation de la table Classe
 			statement.executeUpdate("create table CLASSE(ID_CLASSE numeric(8,0) not null,"
-					+ "ID_ENSEIGANT numeric(8,0) not null," + "primary key (ID_CLASSE));");
+					+ "ID_ENSEIGANT numeric(8,0) not null,"
+					+ "primary key (ID_CLASSE),"
+					+ "foreign key (ID_ENSEIGANT) references ENSEIGNANT (ID_ENSEIGANT)"
+					+ "on delete restrict on update restrict);");
 
 			// Creation de la table Eleve
-			statement.executeUpdate(
-					"create table ELEVE(ID_ELEVE numeric(8,0) not null," + "ID_CLASSE numeric(8,0) not null,"
-							+ "PRENOM_ELEVE char(40)," + "NOM_ELEVE char(40)," + "primary key (ID_ELEVE));");
+			statement.executeUpdate("create table ELEVE(ID_ELEVE numeric(8,0) not null,"
+					+ "ID_CLASSE numeric(8,0) not null,"
+					+ "PRENOM_ELEVE char(40),"
+					+ "NOM_ELEVE char(40),"
+					+ "primary key (ID_ELEVE),"
+					+ "foreign key (ID_CLASSE) references CLASSE (ID_CLASSE) on delete restrict on update restrict);");
 
 			// Creation de la table Enseignant
 			statement.executeUpdate("create table ENSEIGNANT(ID_ENSEIGANT numeric(8,0) not null,"
-					+ "NOM_ENSEIGNANT char(40)," + "PRENOM_ENSEIGNANT char(40)," + "primary key (ID_ENSEIGANT));");
+					+ "NOM_ENSEIGNANT char(40),"
+					+ "PRENOM_ENSEIGNANT char(40),"
+					+ "primary key (ID_ENSEIGANT));");
 
 			// Creation de la table Exercice
 			statement.executeUpdate("create table EXERCICE(ID_EXERCICE numeric(8,0) not null,"
-					+ "ID_ENSEIGANT numeric(8,0) not null," + "ID_TORTUE numeric(8,0) not null,"
-					+ "NOM_EXERCICE char(100)," + "IMAGE char(1000)," + "primary key (ID_EXERCICE));");
+					+ "ID_ENSEIGANT numeric(8,0) not null,"
+					+ "ID_TORTUE numeric(8,0) not null,"
+					+ "NOM_EXERCICE char(100),"
+					+ "IMAGE char(1000),"
+					+ "primary key (ID_EXERCICE),"
+					+ "foreign key (ID_ENSEIGANT) references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict,"
+					+ "foreign key (ID_TORTUE) references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict);");
 
 			// Creation de la table Tentative
+			// La cle etrangere ID_ENSEIGANT etait vide 
 			statement.executeUpdate("create table TENTATIVE(ID_TENTATIVE numeric(8,0) not null,"
-					+ "ID_ENSEIGANT numeric(8,0) not null," + "ID_ELEVE numeric(8,0) not null,"
-					+ "ID_ACTION numeric(8,0) not null," + "ID_EXERCICE numeric(8,0) not null," + "SCORE numeric(2,0),"
-					+ "COMMENTAIRES char(1000)," + "primary key (ID_TENTATIVE));");
+					+ "ID_ENSEIGANT numeric(8,0) not null,"
+					+ "ID_ELEVE numeric(8,0) not null,"
+					+ "ID_ACTION numeric(8,0) not null,"
+					+ "ID_EXERCICE numeric(8,0) not null,"
+					+ "SCORE numeric(2,0),"
+					+ "COMMENTAIRES char(1000),"
+					+ "primary key (ID_TENTATIVE),"
+					+ "foreign key (ID_EXERCICE) references EXERCICE (ID_EXERCICE) on delete restrict on update restrict,"
+					+ "foreign key (ID_ACTION) references ACTION (ID_ACTION) on delete restrict on update restrict,"
+					+ "foreign key (ID_ENSEIGANT) references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict,"
+					+ "foreign key (ID_ELEVE) references ELEVE (ID_ELEVE) on delete restrict on update restrict);");
 
 			// Creation de la table Type_torue
 			statement.executeUpdate("create table TYPE_TORTUE(ID_TORTUE numeric(8,0) not null, "
-					+ "TYPE_TORTUE char(100)," + "primary key (ID_TORTUE));");
+					+ "TYPE_TORTUE char(100),"
+					+ "primary key (ID_TORTUE));");
 
 			/*
-			 * ALTER TABLES
+			 * INSERTION DE DONNEES DANS LA BASE
 			 */
-			statement.executeUpdate("alter table AGIT_SUR add constraint FK_AGIT_SUR foreign key (ID_TORTUE)"
-					+ " references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
 
-			statement.executeUpdate("alter table AGIT_SUR add constraint FK_AGIT_SUR2 foreign key (ID_ACTION)"
-					+ " references ACTION (ID_ACTION) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table CLASSE add constraint FK_SUIT foreign key (ID_ENSEIGANT)"
-					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table ELEVE add constraint FK_POSSEDE foreign key (ID_CLASSE)"
-					+ " references CLASSE (ID_CLASSE) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table EXERCICE add constraint FK_CREE foreign key (ID_ENSEIGANT)"
-					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table EXERCICE add constraint FK_UTILISE foreign key (ID_TORTUE)"
-					+ " references TYPE_TORTUE (ID_TORTUE) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_ASSOCIE foreign key (ID_EXERCICE)"
-					+ " references EXERCICE (ID_EXERCICE) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_CONTIENT foreign key (ID_ACTION)"
-					+ " references ACTION (ID_ACTION) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_EVALUE foreign key ()"
-					+ " references ENSEIGNANT (ID_ENSEIGANT) on delete restrict on update restrict;");
-
-			statement.executeUpdate("alter table TENTATIVE add constraint FK_FAIT foreign key (ID_ELEVE)"
-					+ " references ELEVE (ID_ELEVE) on delete restrict on update restrict;");
-
-			// statement.executeUpdate("create table person (id integer, name
-			// string)");
-			// statement.executeUpdate("insert into person values(1, 'leo')");
+			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (1,'1','Yoline','Robichon');");
+			
+			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (2,'1','Agathe','Beaubeyrot');");
+			
+			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (3,'1','Chloe','Pouvrea');");
+			
+			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (4,'1','PJ','DLF');");
+			
+			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (5,'1','Charles','Tholliez');");
+			
 			// statement.executeUpdate("insert into person values(2, 'yui')");
 			// ResultSet rs = statement.executeQuery("select * from person");
 			// while (rs.next()) {
