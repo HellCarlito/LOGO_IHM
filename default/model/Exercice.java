@@ -64,13 +64,37 @@ public class Exercice
   {
 	  return imageExercice;
   }
+  
+  /**
+   * Retourne le professeur associé à l'exercice
+   * 
+   * @return le professeur
+   */
+  public Enseignant getProf()
+  {
+	  return prof;
+  }
 
   /** 
    *  Modifie un exercice (seulement si aucun eleve ne l'ai deja fait).
    */
   public void setExercice(Icon imageExo)
   {
-	  if (prof.getClasses().getEleve().getTentatives() == null){
+	  boolean fait = false;
+	  for (Classe maClasse: prof.getClasses())
+	  {
+		  for (Eleve monEleve : maClasse.getEleve())
+		  {
+			  for (Tentative maTentative : monEleve.getTentativeEleves())
+			  {
+				  if (maTentative.getExercice() == this)
+				  {
+					  fait = true;
+				  }
+			  }
+		  }
+	  }
+	  if (fait == false){
 		  imageExercice = imageExo;
 	  } else {
 		  System.out.println("Impossible de modifier votre exercice, un eleve a deja fait une tentative !");
