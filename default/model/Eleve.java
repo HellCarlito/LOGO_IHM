@@ -3,7 +3,8 @@ package model;
 
 /** 
  *  Cette classe va permettre la gestion des eleves d'une classe et des tentatives qu'ils auront fait.
- *  On pourra voir les differentes tentatives de l'eleve, et la classe a laquelle il est associe (si besoin, pouvoir egalement changer l'eleve de classe).
+ *  On pourra voir les differentes tentatives de l'eleve, et la classe a laquelle il est associe
+ *  (si besoin, pouvoir egalement changer l'eleve de classe).
  */
 public class Eleve extends Utilisateur
 {
@@ -19,9 +20,9 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Creation d'un eleve. L'eleve aura un nom, un prenom et la classe a laquelle l'eleve est associe.
-   *  @param nomEleve : repr�sente le nom de l'�l�ve 
-   *  @param prenomEleve : repr�sente le pr�nom de l'�l�ve
-   *  @param classeEleve : repr�sente la classe dans laquelle est l'�l�ve
+   *  @param nomEleve : represente le nom de l'eleve 
+   *  @param prenomEleve : represente le prenom de l'eleve
+   *  @param classeEleve : represente la classe dans laquelle est l'eleve
    */
   public void Eleve(String nomEleve, String prenomEleve, Classe classeEleve)
   {
@@ -30,7 +31,7 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Retourne la classe de l'eleve
-   *  @return tous les �l�ments d'une classe (nom, enseignant, liste des �l�ves)
+   *  @return tous les elements d'une classe (nom, enseignant, liste des eleves)
    */
   public Classe getClasse()
   {
@@ -39,7 +40,7 @@ public class Eleve extends Utilisateur
 
   /** 
    *  Ajouter une tentative pour un exercice.
-   *  @param uneTentative : repr�sente une tentative en tant que tel (date, exercice, �valuation et commentaire)
+   *  @param uneTentative : represente une tentative en tant que tel (date, exercice, evaluation et commentaire)
    */
   public void addTentative(Tentative uneTentative)
   {
