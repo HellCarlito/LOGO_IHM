@@ -19,8 +19,6 @@ public class Eleve extends Utilisateur
 	private String nom;
 	// le nom de l'eleve
 	private String prenom;
-	// la classe de l'eleve
-	private Classe classe;
 	// variable qui stocke les tentatives de l'eleve
 	private ArrayList<Tentative> tentativeEleve;
 
@@ -35,22 +33,11 @@ public class Eleve extends Utilisateur
 	 * @param classeEleve
 	 *            : represente la classe dans laquelle est l'eleve
 	 */
-	public Eleve(String nomEleve, String prenomEleve, Classe classeEleve)
+	public Eleve(String nomEleve, String prenomEleve)
 	{
 		super(nomEleve,prenomEleve);
-		this.classe = classeEleve;
 	}
 
-	/**
-	 * Retourne la classe de l'eleve
-	 * 
-	 * @return tous les elements d'une classe (nom, enseignant, liste des
-	 *         eleves)
-	 */
-	public Classe getClasse()
-	{
-		return classe;
-	}
 
 	/**
 	 * Ajouter une tentative pour un exercice.
