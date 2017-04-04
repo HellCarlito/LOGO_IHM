@@ -1,5 +1,8 @@
 package view;
 import javax.swing.*;
+
+import model.Exercice;
+
 import java.awt.*;
 
 public class DessinExercice extends JPanel
@@ -9,11 +12,12 @@ public class DessinExercice extends JPanel
 	//il s'agit du dessin du prof
 	private JPanel dessinProf;
 	
-	public DessinExercice()
+	public DessinExercice(Exercice unExercice)
 	{
 		//Instanciation des panels
-		dessinEnfant = new JPanel();
-		dessinProf = new JPanel();
+		JPanel dessinEnfant = new JPanel();
+		JLabel dessinProf = new JLabel(unExercice.getImageExercice());
+		
 		
 		//Association des sous-panels au panel général
 		this.setLayout(new GridLayout(1,0));
