@@ -1,6 +1,8 @@
 package model;
   /* {author=Groupe 5, version=2017}*/
 
+import javax.swing.*;
+
 /** 
  *  Cette classe va gerer toutes les actions faites par l'eleve (une image, un code ainsi qu'un commentaire).
  */
@@ -9,19 +11,19 @@ public class Action
 	/**
 	 * Attributs
 	*/
-  //Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
+	//Represente l'icone de l'action
+	private Icon monIcone;
+	//Represente l'action sous forme de petite phrase correspondant au type d'action effectue par l'eleve. 
   private String codeAction;
-  // correspond a la tortue utilisee pour faire l'exercice. 
-  private TortueG maTortue;
 
   /** 
    *  Le constructeur associe le code avec l'image correspondante.
    *  @param code : represente une chaine de caractere qui correspond ï¿½ l'action effectuï¿½e
    */
-  public Action(String code,TortueG tortue)
+  public Action(Icon icone, String code)
   {
+	  monIcone = icone;
 	  codeAction=code;
-	  maTortue=tortue;
   }
 
   /** 
@@ -32,14 +34,14 @@ public class Action
   {
 	  return this.codeAction;
   }
-
-  /** 
-   *  Retourne le type de la tortue associee a l'action.
-   *  @return le type de la tortue utilise pour faire l'action
+  
+  /**
+   * Retourne l'icone de l'action
+   * @return une image correspondant à l'action faite
    */
-  public TortueG getMaTortue()
+  public Icon getIcone()
   {
-	  return this.maTortue;
+	  return this.monIcone;
   }
 
   /** 
