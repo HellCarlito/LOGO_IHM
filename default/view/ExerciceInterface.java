@@ -30,17 +30,17 @@ public class ExerciceInterface extends JPanel
 		this.add(codeAction,BorderLayout.EAST);
 	}
 	
-	public JPanel getPanelCode()
+	public Code getPanelCode()
 	{
 		return codeAction;
 	}
 	
-	public JPanel getPanelDessins()
+	public DessinExercice getPanelDessins()
 	{
 		return dessins;
 	}
 	
-	public JPanel getPanelBoutons()
+	public ZoneBouton getPanelBoutons()
 	{
 		return boutons;
 	}
