@@ -82,11 +82,4 @@ public class Evaluation extends JPanel{
 		this.add(evaluation);
 		this.add(commentaires);
 	}
-	
-	public static void main(String[] args) {
-        JFrame test = new JFrame();
-        test.setContentPane(new Evaluation());
-        test.setVisible(true);
-        test.pack();
-    }
 }
