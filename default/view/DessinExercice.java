@@ -6,11 +6,7 @@ import model.Exercice;
 import java.awt.*;
 
 public class DessinExercice extends JPanel
-{	
-	// il s'agit du dessin de l'enfant
-	private JPanel dessinEnfant;
-	//il s'agit du dessin du prof
-	private JPanel dessinProf;
+{
 	
 	public DessinExercice(Exercice unExercice)
 	{
