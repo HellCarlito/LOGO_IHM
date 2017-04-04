@@ -115,7 +115,6 @@ public class DatabaseCreation {
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (5,'1','Charles','Tholliez');");
 			
-			// statement.executeUpdate("insert into person values(2, 'yui')");
 			// ResultSet rs = statement.executeQuery("select * from person");
 			// while (rs.next()) {
 			// // lit les resultats
