@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class DatabaseCreation {
 	public static void main(String[] args) throws ClassNotFoundException {
 		// load the sqlite-JDBC driver using the current class loader
-		//Class.forName("org.sqlite.JDC");
+		// Class.forName("org.sqlite.JDC");
 
 		DatabaseConnection connectionDB = new DatabaseConnection();
 		// Connection connection = null;
@@ -97,12 +97,6 @@ public class DatabaseCreation {
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (5,'1','Charles','Tholliez');");
 
-			// ResultSet rs = statement.executeQuery("select * from person");
-			// while (rs.next()) {
-			// // lit les resultats
-			// System.out.println("name = " + rs.getString("name"));
-			// System.out.println("id = " + rs.getInt("id"));
-			// }
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
 			// it probably means no database file is found

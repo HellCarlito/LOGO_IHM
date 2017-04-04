@@ -13,8 +13,6 @@ import java.sql.Statement;
 public class DatabaseLoader {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// Connexion a la base de donnees
-		// connect();
 		// chargement de la base de donnees
 		loadDatabase();
 	}
