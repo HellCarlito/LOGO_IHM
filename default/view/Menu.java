@@ -36,7 +36,7 @@ public class Menu extends JPanel{
 		//Initialisation des variables pour la page Eleve
 		boutonEleve = new ActionMenu();
 		titreEleve = new Titre("Eleve");
-		//affichageMenuEleve = new Affichage();
+		affichageMenuEleve = new Affichage();
 				
 		//Initialisation des variables pour la page Enseignant
 		boutonEnseignant = new ActionMenu();	

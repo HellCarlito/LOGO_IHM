@@ -6,6 +6,11 @@ import javax.swing.event.*;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.table.*;
+import model.Eleve;
+import model.Tentative;
+import view.Menu;
+import model.Exercice;
 
 public class Affichage extends JPanel {
 	
@@ -15,28 +20,39 @@ public class Affichage extends JPanel {
 	private JPanel affichageMenuEleve, affichageMenuEnseignant;
 	private JTable table;
 	private myModel modele;
+	private JPanel affichEleve;
 	
 	public  Affichage(){
 		
-		modele = new myModel();
-		table = new JTable(modele);
-		this.setSize(300,300);
-		this.add(table);
-		this.setViewportView(table);
+		//Affichage du menu Eleve avec la table de ces exercices
+		affichEleve = this.getAffichageEleve(); 
+		this.add(affichEleve);
+		
 	}
 
 	public JPanel getAffichageEleve(){
 	
 		//Initialisation du panel principal qui sera retourné
-		affichageMenuEleve = new JPanel();
+		affichageMenuEleve = new JPanel(new GridLayout(2,1));
 		
-		
-		
+		JLabel monTitre = new JLabel(" ", JLabel.CENTER);
+		modele = new myModel();
+		table = new JTable(modele);
+
+		affichageMenuEleve.add(monTitre);
+		affichageMenuEleve.add(table);
 		return affichageMenuEleve;
 		
 	}
 	
-	
+	/*/
+	 * Cette méthode permet de modifier les données de la classe
+	 */
+	public void setData(Tentative t)
+	{
+		modele.setData(t);
+		modele.fireTableDataChanged();
+	}
 	
 	/*/
 	 * Création d'une classe static
@@ -44,9 +60,11 @@ public class Affichage extends JPanel {
 	static class myModel extends AbstractTableModel
 	{
 		/*/
-		 * Attribut
+		 * Attributs
 		 */
-		private  data;
+		private Tentative data;
+		private Eleve eleve;
+		private Exercice exo;
 		
 		/*/
 		 * Méthode retournant le nombre de colonnes dans le tableau
@@ -65,7 +83,7 @@ public class Affichage extends JPanel {
 		@Override
 		public int getRowCount()
 		{
-			return (data == null ? 0 : data.getEleve().size());
+			return (data == null ? 0 : eleve.getTentativeEleves().size());
 		}
 		
 		/*/
@@ -77,7 +95,7 @@ public class Affichage extends JPanel {
 			switch (i) 
 			{
 			case 0 : return "Nom Exercice";
-			case 1 : return "Score";
+			case 1 : return "Notation";
 			case 2 : return "Commentaire(s)";
 			default : return "";
 			}
@@ -92,13 +110,20 @@ public class Affichage extends JPanel {
 		{
 			switch (columnIndex)
 			{
-			case 0 : return data.getEleve().get(rowIndex).getIcone();
-			case 1 : return data.getEleve().get(rowIndex).getPrenom();
-			case 2 : return data.getEleve().get(rowIndex).getNom();
+			case 0 : return exo.getNomExercice();
+			case 1 : return data.getEvaluation();
+			case 2 : return data.getCommentaire();
 			default : return "";
 			}
-		}
-		
+		}	
 	
+		/*/
+		 * Méthode modifiant les données de la classe
+		 */
+		public void setData(Tentative t)
+		{
+			this.data = t;
+		}	
 	
+	}
 }
