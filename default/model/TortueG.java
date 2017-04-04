@@ -82,8 +82,8 @@ public class TortueG {
     }
 
     /**
-     * M�thode permettant de tourner, dans le sens des aiguilles d'une montre
-     * La m�thode r�affiche la tortue apr�s le mouvement
+     * Methode permettant de tourner, dans le sens des aiguilles d'une montre
+     * La methode reaffiche la tortue apres le mouvement
      */
     public void tourner() {
         direction++;
@@ -93,7 +93,7 @@ public class TortueG {
     }
 
     /**
-     * M�thode permettant de tracer ou non
+     * Methode permettant de tracer ou non
      * Remarque : cette impl�mentation n'est pas correcte : elle ne garantit pas
      * un appel correct des m�thodes ; on peut appeler deux fois de suite
      * tracer(true) par exemple
