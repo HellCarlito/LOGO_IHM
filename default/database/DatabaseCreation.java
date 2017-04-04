@@ -8,7 +8,7 @@ import java.sql.Statement;
  * Cette classe permet la creation d'une base de donnees
  */
 public class DatabaseCreation {
-	public static void main(String[] args) throws ClassNotFoundException {
+	public static void main(String[] args) {
 		// load the sqlite-JDBC driver using the current class loader
 		// Class.forName("org.sqlite.JDC");
 

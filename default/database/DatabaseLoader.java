@@ -13,13 +13,12 @@ import java.sql.Statement;
 public class DatabaseLoader {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// chargement de la base de donnees
 		loadDatabase();
 	}
 
-	// Cette methode permet de charger les donnees presentes dans la base de
-	// donnees
-	public static void loadDatabase() throws SQLException, ClassNotFoundException {
+	// Cette methode permet de charger les donnees 
+	// presentes dans la base de donnees
+	public static void loadDatabase() throws SQLException {
 		DatabaseConnection connectionDB = new DatabaseConnection();
 		String sqlRequest = ("select * from eleve");
 
