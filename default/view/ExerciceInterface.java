@@ -8,21 +8,19 @@ import model.*;
 
 public class ExerciceInterface extends JPanel
 {
-	private JPanel codeAction;
-	private JPanel dessins;
-	private JPanel boutons;
+	private Code codeAction;
+	private DessinExercice dessins;
+	private ZoneBouton boutons;
 
 	/**
 	 * Constructeur
 	 */
 	public ExerciceInterface(Exercice unExercice)
 	{
-		codeAction = new JPanel();
+		codeAction = new Code();
 		codeAction.add(new Code());
-		dessins = new JPanel();
-		dessins.add(new DessinExercice(unExercice));
-		boutons = new JPanel();
-		boutons.add(new ZoneBouton(unExercice.getTortue()));
+		dessins = new DessinExercice(unExercice);
+		boutons = new ZoneBouton((unExercice.getTortue()));
 		JPanel zoneTravail = new JPanel(new GridLayout (0,1));
 		zoneTravail.add(dessins);
 		zoneTravail.add(boutons);

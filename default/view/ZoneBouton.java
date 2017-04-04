@@ -7,45 +7,49 @@ import view.*;
 
 public class ZoneBouton extends JPanel
 {
-	private JPanel boutonsDeplacement;
-	private JPanel boutonsSpecifique;
-	private JPanel boutonsGestion;
+	private BoutonDeplacement boutonsDeplacement;
+	private BoutonCouleur boutonsCouleur;
+	private BoutonRapide boutonsRapide;
+	private BoutonGestion boutonsGestion;
 	
 	public ZoneBouton(TortueG maTortue)
 	{
-		boutonsDeplacement= new JPanel();
-		boutonsDeplacement.add(new BoutonDeplacement());
-		boutonsGestion= new JPanel();
-		boutonsGestion.add(new BoutonGestion());
-		boutonsSpecifique=new JPanel();
+		boutonsDeplacement= new BoutonDeplacement();
+		boutonsGestion= new BoutonGestion();
+		JPanel haut=new JPanel(new BorderLayout());
+		haut.add(boutonsDeplacement,BorderLayout.CENTER);
 		if (maTortue instanceof TortueCouleur)
 		{
-			boutonsSpecifique.add(new BoutonCouleur(),BorderLayout.EAST);
+			boutonsCouleur=new BoutonCouleur();
+			haut.add(boutonsCouleur,BorderLayout.EAST);
 		}
 		else if (maTortue instanceof TortueRapide)
 		{
-			boutonsSpecifique.add(new BoutonRapide(),BorderLayout.EAST);
+			boutonsRapide=new BoutonRapide();
+			haut.add(boutonsRapide,BorderLayout.EAST);
 		}
-		JPanel haut=new JPanel(new BorderLayout());
-		haut.add(boutonsDeplacement,BorderLayout.CENTER);
-		haut.add(boutonsDeplacement,BorderLayout.EAST);
 		
 		this.setLayout(new GridLayout (0,1));
 		this.add(haut);
 		this.add(boutonsGestion);
 	}
 	
-	public JPanel getPanelDeplacement()
+	public BoutonDeplacement getPanelDeplacement()
 	{
 		return boutonsDeplacement;
 	}
 	
-	public JPanel getPanelSpecifique()
+	public BoutonCouleur getPanelCouleur()
 	{
-		return boutonsSpecifique;
+		return boutonsCouleur;
 	}
 	
-	public JPanel getPanelGestion()
+	public BoutonRapide getPanelRapide()
+	{
+		return boutonsRapide;
+	}
+	
+	public BoutonGestion getPanelGestion()
 	{
 		return boutonsGestion;
 	}
