@@ -27,6 +27,34 @@ public class ExerciceEleve
 		 {
     		 
 		 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getNePasEcrire())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getTourner())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getAvancer())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getValider())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getQuitter())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getUndo())
+    	 {
+    		 
+    	 }
+    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getRedo())
+    	 {
+    		 
+    	 }
      }
 
 }
