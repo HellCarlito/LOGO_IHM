@@ -27,7 +27,6 @@ public class BoutonDeplacement extends JPanel
 		this.add(nePasEcrire);
 		this.add(tourner);
 		this.add(avancer);
-		//this.add(new JLabel("test"));
 	}
 	
 	public static void main(String[] args) {
