@@ -12,7 +12,7 @@ public class DatabaseConnection {
 		java.sql.Connection connection = null;
 		try {
 			connection = DriverManager.getConnection("jdbc:sqlite:test.db");
-			System.out.println("Connexion avec la base données établie");
+			System.out.println("Connexion avec la base de données établie");
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}

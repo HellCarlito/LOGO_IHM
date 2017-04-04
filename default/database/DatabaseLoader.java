@@ -28,8 +28,7 @@ public class DatabaseLoader {
 				ResultSet rs = stmt.executeQuery(sqlRequest)) {
 			while (rs.next()) {
 				// lit les resultats
-				System.out.println("prenom = " + rs.getString("prenom_eleve"));
-				System.out.println("nom = " + rs.getString("nom_eleve"));
+				System.out.println("prenom = " + rs.getString("prenom_eleve") + " - nom = " + rs.getString("nom_eleve"));
 			}
 
 		}

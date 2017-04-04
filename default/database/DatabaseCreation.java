@@ -81,7 +81,8 @@ public class DatabaseCreation {
 			/*
 			 * INSERTION DE DONNEES DANS LA BASE
 			 */
-
+			
+			// Table ELEVE
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (1,'1','Yoline','Robichon');");
 
@@ -89,13 +90,29 @@ public class DatabaseCreation {
 					+ " VALUES (2,'1','Agathe','Beaubeyrot');");
 
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
-					+ " VALUES (3,'1','Chloe','Pouvrea');");
+					+ " VALUES (3,'1','Chloe','Pouvreau');");
 
 			statement.executeUpdate(
-					"INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)" + " VALUES (4,'1','PJ','DLF');");
+					"INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
+					+ " VALUES (4,'1','PJ','DLF');");
 
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (5,'1','Charles','Tholliez');");
+			
+			// Table ENSEIGNANT
+			statement.executeUpdate("INSERT INTO ENSEIGNANT(ID_ENSEIGANT,NOM_ENSEIGNANT,PRENOM_ENSEIGNANT)"
+					+ " VALUES (1,'Girard','Patrick');");
+			
+			statement.executeUpdate("INSERT INTO ENSEIGNANT(ID_ENSEIGANT,NOM_ENSEIGNANT,PRENOM_ENSEIGNANT)"
+					+ " VALUES (2,'Geniet','Annie');");
+			
+			statement.executeUpdate("INSERT INTO ENSEIGNANT(ID_ENSEIGANT,NOM_ENSEIGNANT,PRENOM_ENSEIGNANT)"
+					+ " VALUES (3,'Geniet','Dominique');");
+			
+			// Table CLASSE
+			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (1,'1');");
+			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (2,'2');");
+			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (3,'3');");
 
 		} catch (SQLException e) {
 			// if the error message is "out of memory",
