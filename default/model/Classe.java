@@ -20,21 +20,15 @@ public class Classe
   private ArrayList<Eleve> compositionClasse;
   //Liste des exercices de la classe
   private ArrayList<Exercice> exercices;
-  //Liste des tentatives de la classe
-  private ArrayList<Tentative> tentatives;
-  //Nombre d'eleves dans la classe
-  private int nbEleve;
-
   /** 
    *  Constructeur de classe, une classe possede un nom et l'enseignant associee.
    *  @param nom : correspond au nom de la classe
    *  @param enseignantClasse : represente l'enseignant en tant que tel (nom, prenom)
    */
-  public Classe(String nom, Enseignant enseignantClasse, int nbE)
+  public Classe(String nom, Enseignant enseignantClasse)
   {
 	  nomClasse= nom;
 	  enseignant = enseignantClasse;
-	  nbEleve = nbE;
   }
 
   /** 
@@ -66,15 +60,22 @@ public class Classe
 	  return exercice;
   }
   
-  /**
-   * Retourne la liste des tentatives de la classe
-   * @return une liste de tentative
+  /** 
+   *  Retourne l'enseignant de la classe.
+   *  @return toutes les donnees de l'enseignant (nom, prenom, liste de ses classes)
    */
-  public ArrayList<Tentative> getTentative()
+  public Enseignant getEnseignant()
   {
-	  ArrayList<Tentative> tentative = new ArrayList<Tentative>();
-	  return tentative;
+	  return enseignant;
   }
+  
+  /** 
+   *  Retourne le nombre d'eleve de la classe.
+   */
+  public int getNbEleve(){
+	  return this.getEleve().size();
+  }
+  
 
   /** 
    *  Ajoute un eleve dans la classe.
@@ -82,17 +83,21 @@ public class Classe
    */
   public void ajouterEleve(Eleve eleve)
   {
-	boolean isPresent = false; 
-	for (Eleve unEleve:this.getEleve()){
-		if (unEleve == eleve){
-			isPresent = true;
-		}
-	}
-	
-	if (isPresent = false){
-		this.compositionClasse.add(eleve);
-	}
-	else System.out.print("L'eleve existe deja dans cette classe ");
+	 if (this.getEleve().contains(eleve)==false){
+		 this.compositionClasse.add(eleve);
+	 }
+	 else System.out.print("L'eleve existe deja dans cette classe ");
+//	boolean isPresent = false; 
+//	for (Eleve unEleve:this.getEleve()){
+//		if (unEleve == eleve){
+//			isPresent = true;
+//		}
+//	}
+//	
+//	if (isPresent = false){
+//		this.compositionClasse.add(eleve);
+//	}
+//	else System.out.print("L'eleve existe deja dans cette classe ");
   }
 
   /** 
@@ -102,17 +107,21 @@ public class Classe
    */
   public void ajouterExercice(Exercice exercice)
   {
-	  boolean isPresent = false; 
-		for (Exercice unExo:this.getExercice()){
-			if (unExo == exercice){
-				isPresent = true;
-			}
-		}
-		
-		if (isPresent = false){
-			this.exercices.add(exercice);
-		}
-		else System.out.print("L'eleve existe deja dans cette classe ");
+	  if (this.getExercice().contains(exercice)==false){
+			 this.exercices.add(exercice);
+		 }
+		 else System.out.print("L'exercice existe deja dans la liste d'exercice ");
+//	  boolean isPresent = false; 
+//		for (Exercice unExo:this.getExercice()){
+//			if (unExo == exercice){
+//				isPresent = true;
+//			}
+//		}
+//		
+//		if (isPresent = false){
+//			this.exercices.add(exercice);
+//		}
+//		else System.out.print("L'eleve existe deja dans cette classe ");
   }
 
   /** 
@@ -123,11 +132,11 @@ public class Classe
   public void supprimerExercice(Exercice exercice)
   {
 	 boolean fait = false;
-	 for (Exercice unExo: this.getExercice())
+	 for (Eleve unEleve: this.getEleve())
 	 {
-		 for (Tentative uneTentative:this.getTentative())
+		 for (Tentative uneTentative:unEleve.getTentativeEleves())
 		 {
-			 if (uneTentative != null)
+			 if (uneTentative.getExercice()==exercice)
 			 {
 				 fait = true;
 			 }
@@ -138,16 +147,7 @@ public class Classe
 	 {
 	  this.exercices.remove(exercice);
 	 }
-	 else System.out.print("L'exercice a deja ete effectue par des eleves. Il ne peut pas etre supprimer ! ");
-  }
-
-  /** 
-   *  Retourne l'enseignant de la classe.
-   *  @return toutes les donnees de l'enseignant (nom, prenom, liste de ses classes)
-   */
-  public Enseignant getEnseignant()
-  {
-	  return enseignant;
+	 else System.out.print("L'exercice a deja ete effectue par des eleves. Il ne peut pas etre supprime ! ");
   }
 
 }
