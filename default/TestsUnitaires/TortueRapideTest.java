@@ -8,8 +8,8 @@ import model.*;
 /**
  * The test class TortueRapideTest.
  *
- * @author  Pattrick Girard
- * @version février 2013
+ * @author  Patrick Girard
+ * @version fevrier 2013
  */
 public class TortueRapideTest
 {
