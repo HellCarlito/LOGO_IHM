@@ -51,7 +51,7 @@ public class BoutonGestion extends JPanel
 		return redo;
 	}
 	
-	public JButton getQuitterAvancer()
+	public JButton getQuitter()
 	{
 		return quitter;
 	}
