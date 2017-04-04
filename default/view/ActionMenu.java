@@ -15,10 +15,12 @@ public class ActionMenu extends JPanel{
 	private JButton faireExercice, visualiserTentative, refaireTentative, visualisationResultats;
 	private JButton creerExercice, modifierExercice, explorerTravailEleve, evaluerTravailEleve, visualiserClasse;
 	
+	
 	/**
-	 * Constructeur 
+	 * Classe principale de la classe ActionMenu 
+	 * @return un Panel
 	 */
-	public ActionMenu () 
+	public JPanel ActionMenu() 
 	{
 		//Initialisation des boutons du menu de l'interface Eleve
 		faireExercice = new JButton ("Faire un exercice");
@@ -55,14 +57,45 @@ public class ActionMenu extends JPanel{
 		this.add(boutonsMenuEnseignant);     
         
 		// si c'est le menu de l'eleve
-		this.add(boutonsMenuEleve);      
+		this.add(boutonsMenuEleve);    
+		
+		return this;
 	}
 	
+		
+	public JButton getFaireExo(){
+		return faireExercice;
+	}
 	
-	public static void main(String[] args) {
-        JFrame test = new JFrame();
-        test.setContentPane(new ActionMenu());
-        test.setVisible(true);
-        test.pack();
-    }
+	public JButton getVisualiserTentative(){
+		return visualiserTentative;
+	}
+	
+	public JButton getRefaireTentative(){
+		return refaireTentative;
+	}
+	
+	public JButton getVisualiserResultat(){
+		return visualisationResultats;
+	}
+	
+	public JButton getCreerExo(){
+		return creerExercice;
+	}
+	
+	public JButton getModifExo(){
+		return modifierExercice;
+	}
+	
+	public JButton getExplorerTravail(){
+		return explorerTravailEleve;
+	}
+	
+	public JButton getEvaluerEleve(){
+		return evaluerTravailEleve;
+	}
+	
+	public JButton getVisualiserClasse(){
+		return visualiserClasse;
+	}	
 }
