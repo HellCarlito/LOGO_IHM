@@ -1,5 +1,10 @@
 package controler;
 
-public class ExerciceEleve {
+public class ExerciceEleve
+{
+	public ExerciceEleve()
+	{
+		
+	}
 
 }

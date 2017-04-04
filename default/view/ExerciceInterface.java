@@ -1,44 +1,35 @@
 package view;
-
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.event.*;
 import javax.swing.*;
 import java.awt.*;
+import model.*;
 
-public class ExerciceInterface extends JPanel{
+public class ExerciceInterface extends JPanel
+{
 
-	/**
-	 * Attributs
-	 */
-	//Contiendra les sous-panels realisationDessin et affichageCode
-	private JPanel exerciceInterface;
-	//Contiendra les sous-panels dessin et interfaceBoutons
-	private JPanel realisationDessin;
-	
 	/**
 	 * Constructeur
 	 */
-	public ExerciceInterface(){
+	public ExerciceInterface(TortueG uneTortue)
+	{
+		JPanel code = new JPanel();
+		code.add(new Code());
+		JPanel gauche = new JPanel(new GridLayout (0,1));
+		gauche.add(new DessinExercice());
+		gauche.add(new ZoneBouton(uneTortue));
 		
-		//Initialisation des panels
-		exerciceInterface = new JPanel();
-		realisationDessin = new JPanel();
-		
-		//Ajout des Panels au Panel principal
-		exerciceInterface.add(realisationDessin);
-		//exerciceInterface.add(affichageCode); //récuperer le panel dans la classe Code
-		
-		//Ajout des Panels au sous-panel realisationDessin
-		//realisationDessin.add(dessins); //récuperer le panel dans la classe DessinExercice
-		//realisationDessin.add(interfaceBoutons); //récuperer le panel dans la classe ZoneBouton
-		
-		this.add(exerciceInterface);
+		this.setLayout(new BorderLayout());
+		this.add(gauche,BorderLayout.CENTER);
+		this.add(code,BorderLayout.CENTER);
 	}
 
-public static void main(String[] args) {
+public static void main(String[] args)
+{
+	TortueG uneTortue= new TortueG();
     JFrame test = new JFrame();
-    test.setContentPane(new ExerciceInterface());
+    test.setContentPane(new ExerciceInterface(uneTortue));
     test.setVisible(true);
     test.pack();
 }
