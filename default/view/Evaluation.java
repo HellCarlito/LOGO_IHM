@@ -38,7 +38,7 @@ public class Evaluation extends JPanel{
 		note = new JPanel(new GridLayout(3,1));
 		radioBouton = new JPanel(new GridLayout(1,3));
 		jouer = new JPanel();
-		commentaires = new JPanel();
+		commentaires = new JPanel(new BorderLayout());
 		
 		//Instanciation du JLabel
 		eval = new JLabel("Evaluation", JLabel.CENTER);
@@ -48,7 +48,11 @@ public class Evaluation extends JPanel{
 		com = new JTextArea("Votre commentaire ..");
 		com.setEditable(true);
 		com.setLineWrap(true);
-		com.setSize(200,50);
+		com.setSize(this.getWidth(),this.getHeight());
+		
+		JScrollPane scrollPane = new JScrollPane(com);
+		scrollPane.setVisible(true);
+		scrollPane.setWheelScrollingEnabled(true);
 		
 		//Instanciation des boutons
 		validerChoixEvaluation = new JButton("Valider l'evaluation");
@@ -68,15 +72,15 @@ public class Evaluation extends JPanel{
 		
 		jouer.add(jouerTentative);
 		
-		commentaires.add(com);
+		commentaires.add(scrollPane, BorderLayout.CENTER);
 		
 		//Ajout des Jpanels entre eux
 		evaluation.add(note, BorderLayout.CENTER);
 		evaluation.add(jouer, BorderLayout.EAST);
 		
-		this.setLayout(new BorderLayout());
-		this.add(evaluation, BorderLayout.NORTH);
-		this.add(commentaires, BorderLayout.EAST);
+		this.setLayout(new GridLayout(2,1));
+		this.add(evaluation);
+		this.add(commentaires);
 	}
 	
 	public static void main(String[] args) {
