@@ -16,7 +16,7 @@ public class Titre extends JPanel
 	 * @param monText => texte correspondant au titre de la page où l'on se trouve
 	 * @return un Panel
 	 */
-	public JPanel Titre(String monText){
+	public Titre(String monText){
 
 		JLabel monTitre = new JLabel(monText,JLabel.CENTER);
 		quitterIcon = new ImageIcon(this.getClass().getResource("/pictures/quitter.png"));
@@ -26,11 +26,13 @@ public class Titre extends JPanel
 		this.setLayout(new BorderLayout());
 		this.add(monTitre,BorderLayout.CENTER);
 		this.add(retourMenuPrincipal,BorderLayout.EAST);
-		
-		return this;
 	}
 
 	public JButton getQuitterMenu(){
 		return  retourMenuPrincipal;
+	}
+	
+	public JPanel getTitre(){
+		return this;
 	}
 }

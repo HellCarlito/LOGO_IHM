@@ -20,7 +20,7 @@ public class ActionMenu extends JPanel{
 	 * Classe principale de la classe ActionMenu 
 	 * @return un Panel
 	 */
-	public JPanel ActionMenu() 
+	public ActionMenu() 
 	{
 		//Initialisation des boutons du menu de l'interface Eleve
 		faireExercice = new JButton ("Faire un exercice");
@@ -53,13 +53,13 @@ public class ActionMenu extends JPanel{
 		//Faire une boucle pour savoir si on se trouve sur le compte élève ou enseignant
 		//Afficher le menu en fonction du compte
 	
+		
 		// si c'est le menu de l'enseignant
 		this.add(boutonsMenuEnseignant);     
         
 		// si c'est le menu de l'eleve
 		this.add(boutonsMenuEleve);    
 		
-		return this;
 	}
 	
 		
@@ -98,4 +98,8 @@ public class ActionMenu extends JPanel{
 	public JButton getVisualiserClasse(){
 		return visualiserClasse;
 	}	
+	
+	public JPanel getActionMenu(){
+		return this;
+	}
 }

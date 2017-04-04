@@ -13,40 +13,52 @@ public class Menu extends JPanel{
 	 */
 	private JPanel utilisateur, menu;
 	private JButton enseignant, eleve; 
-	private JPanel boutonEleve, boutonEnseignant, enteteMenu, titre;
+	private JPanel boutonsUtilisateur, boutonEleve, boutonEnseignant, enteteMenu, titreEleve, titreEnseignant;
+	private JPanel tabMenuEleve, tabMenuEnseignant;
+	private JPanel affichageMenuEleve, affichageMenuEnseignant;
 	
 	/**
 	 * Constructeur
 	 */
 	public Menu(){
 		
-		//Initialisation des Panels pour les boutons
-		utilisateur = new JPanel();
-		boutonEleve = new ActionMenu();
-		boutonEnseignant = new ActionMenu();
-		enteteMenu = new Titre();
-		titre = new Titre();
-		
-		//Initialisation des boutons du menu utilisateur
+		//Initialisation des Panels et Boutons pour la page utilisateur
+		utilisateur = new JPanel(new GridLayout(2,1));
+		boutonsUtilisateur = new JPanel(new GridLayout(1,2));
 		enseignant = new JButton("Enseignant");
 		eleve = new JButton("Eleve");
-		utilisateur.add(enseignant);
-		utilisateur.add(eleve);
-		utilisateur.add(titre);//récuperer le panel de la classe titre qui contient un tableau avec le titre et le bouton retour en arrière
-
+		enteteMenu = new Titre("Utilisateur");
+		utilisateur.add(enteteMenu);
+		boutonsUtilisateur.add(enseignant);
+		boutonsUtilisateur.add(eleve);
+		utilisateur.add(boutonsUtilisateur);
 		
-		//Panel menu contiendra le menu suivant le type de compte (enseignant ou eleve)
-		menu = new JPanel();
-		menu.add(enteteMenu); //panel présent dans la classe Titre
+		//Initialisation des variables pour la page Eleve
+		boutonEleve = new ActionMenu();
+		titreEleve = new Titre("Eleve");
+		//affichageMenuEleve = new Affichage();
+				
+		//Initialisation des variables pour la page Enseignant
+		boutonEnseignant = new ActionMenu();	
+		titreEnseignant = new Titre ("Enseignant");
+		//affichageMenuEnseignant = new Affichage();
 		
-		//si menu Eleve
-		menu.add(boutonEleve); //panel present dans la classe ActionMenu
-		//menu.add(affichageMenuEleve); //panel present dans la classe Affichage
+		//Initialisation du Panel Menu qui contiendra soit le menu élève, soit le menu enseignant
+		menu = new JPanel(new GridLayout(2,1));
+		tabMenuEleve = new JPanel(new GridLayout(1,2));
+		tabMenuEnseignant = new JPanel(new GridLayout(1,2));
 		
-		//si menu Enseignant
-		menu.add(boutonEnseignant); // panel present dans la classe ActionMenu
-		//menu.add(affichageMenuEnseignant); //panel present dans la classe Affiche
+		//Si Menu Eleve 
+		menu.add(titreEleve);
+		tabMenuEleve.add(boutonEleve);
+		//tabMenuEleve.add(affichageMenuEleve); 
+		menu.add(tabMenuEleve);
 		
+		//Si Menu Enseignant
+		menu.add(titreEnseignant);
+		tabMenuEnseignant.add(boutonEnseignant); 
+		//tabMenuEnseignant.add(affichageMenuEnseignant); 
+		menu.add(tabMenuEnseignant);
 		
 		//si on est sur la première page où l'on choisit quel compte on souhaite utiliser
 		this.add(utilisateur);
@@ -55,6 +67,13 @@ public class Menu extends JPanel{
 		this.add(menu);
 	}
 	
+	public JButton getEnseignant(){
+		return enseignant;
+	}
+	
+	public JButton getEleve(){
+		return eleve;
+	}
 	
 	public static void main(String[] args) {
         JFrame test = new JFrame();
