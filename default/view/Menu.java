@@ -15,7 +15,7 @@ public class Menu extends JPanel{
 	private JPanel boutonEleve, boutonEnseignant, titreEleve, titreEnseignant;
 	private JPanel tabMenuEleve, tabMenuEnseignant;
 	private JPanel affichageMenuEleve, affichageMenuEnseignant;
-	
+	 
 	/**
 	 * Constructeur
 	 */

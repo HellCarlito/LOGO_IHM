@@ -6,14 +6,14 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class MenuUtilisateur extends JPanel{
-
+ 
 	/**
 	 * Attributs
 	 */
 	private JPanel utilisateur;
 	private JButton enseignant, eleve;
 	private JPanel boutonsUtilisateur, enteteMenu;
-	
+	 
 	/**
 	 * Constructeur
 	 */
