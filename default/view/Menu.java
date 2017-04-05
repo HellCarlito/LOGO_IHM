@@ -11,9 +11,8 @@ public class Menu extends JPanel{
 	/**
 	 * Attributs
 	 */
-	private JPanel utilisateur, menu;
-	private JButton enseignant, eleve; 
-	private JPanel boutonsUtilisateur, boutonEleve, boutonEnseignant, enteteMenu, titreEleve, titreEnseignant;
+	private JPanel menu; 
+	private JPanel boutonEleve, boutonEnseignant, titreEleve, titreEnseignant;
 	private JPanel tabMenuEleve, tabMenuEnseignant;
 	private JPanel affichageMenuEleve, affichageMenuEnseignant;
 	
@@ -21,17 +20,6 @@ public class Menu extends JPanel{
 	 * Constructeur
 	 */
 	public Menu(){
-		
-		//Initialisation des Panels et Boutons pour la page utilisateur
-		utilisateur = new JPanel(new GridLayout(2,1));
-		boutonsUtilisateur = new JPanel(new GridLayout(1,2));
-		enseignant = new JButton("Enseignant");
-		eleve = new JButton("Eleve");
-		enteteMenu = new Titre("Utilisateur");
-		utilisateur.add(enteteMenu);
-		boutonsUtilisateur.add(enseignant);
-		boutonsUtilisateur.add(eleve);
-		utilisateur.add(boutonsUtilisateur);
 		
 		//Initialisation des variables pour la page Eleve
 		boutonEleve = new ActionMenu();
@@ -60,19 +48,8 @@ public class Menu extends JPanel{
 		//tabMenuEnseignant.add(affichageMenuEnseignant); 
 		menu.add(tabMenuEnseignant);
 		
-		//si on est sur la première page où l'on choisit quel compte on souhaite utiliser
-		this.add(utilisateur);
-		
 		//si on est sur l'un des comptes (enseignant ou eleve)
 		this.add(menu);
-	}
-	
-	public JButton getEnseignant(){
-		return enseignant;
-	}
-	
-	public JButton getEleve(){
-		return eleve;
 	}
 	
 	public static void main(String[] args) {
