@@ -25,8 +25,7 @@ public class ExerciceEleve
      {
     	 if (evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getEcrire())
 		 {
-    		 exerciceEleveInterface.
-    		 
+    		 exerciceEleveInterface. 
 		 }
     	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getNePasEcrire())
     	 {
