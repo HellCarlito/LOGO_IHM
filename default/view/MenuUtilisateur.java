@@ -3,6 +3,7 @@ package view;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class MenuUtilisateur extends JPanel{
@@ -40,4 +41,11 @@ public class MenuUtilisateur extends JPanel{
 	public JButton getEleve(){
 		return eleve;
 	}
+	
+	public static void main(String[] args) {
+        JFrame test = new JFrame();
+        test.setContentPane(new MenuUtilisateur());
+        test.setVisible(true);
+        test.pack();
+    }
 }
