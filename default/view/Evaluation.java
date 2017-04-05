@@ -110,4 +110,34 @@ public class Evaluation extends JPanel{
 	public JTextArea getCom() {
 		return com;
 	}
+
+	public JPanel getEvaluation() {
+		return evaluation;
+	}
+
+	public JPanel getNote() {
+		return note;
+	}
+
+	public JPanel getRadioBouton() {
+		return radioBouton;
+	}
+
+	public JPanel getJouer() {
+		return jouer;
+	}
+
+	public JPanel getCommentaires() {
+		return commentaires;
+	}
+
+	public ButtonGroup getBg() {
+		return bg;
+	}
+
+	public JLabel getEval() {
+		return eval;
+	}
 }
+
+
