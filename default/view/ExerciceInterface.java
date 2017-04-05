@@ -12,12 +12,18 @@ public class ExerciceInterface extends JPanel
 	private DessinExercice dessins;
 	private ZoneBouton boutonsEleve;
 	private Evaluation boutonsEnseignant;
+	private Utilisateur monUtilisateur;
+	private Tentative maTentative;
+	private Exercice monExercice;
 
 	/**
 	 * Constructeur
 	 */
-	public ExerciceInterface(Exercice unExercice,Utilisateur unUtilisateur)
+	public ExerciceInterface(Exercice unExercice,Utilisateur unUtilisateur,Tentative uneTentative)
 	{
+		monUtilisateur=unUtilisateur;
+		maTentative=uneTentative;
+		monExercice=unExercice;
 		codeAction = new Code();
 		codeAction.add(new Code());
 		dessins = new DessinExercice(unExercice);
