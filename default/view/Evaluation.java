@@ -82,4 +82,32 @@ public class Evaluation extends JPanel{
 		this.add(evaluation);
 		this.add(commentaires);
 	}
+
+	public JRadioButton getEnCours() {
+		return enCours;
+	}
+
+	public void setEnCours(JRadioButton enCours) {
+		this.enCours = enCours;
+	}
+
+	public JRadioButton getAcquis() {
+		return acquis;
+	}
+
+	public JRadioButton getNonAcquis() {
+		return nonAcquis;
+	}
+
+	public JButton getValiderChoixEvaluation() {
+		return validerChoixEvaluation;
+	}
+
+	public JButton getJouerTentative() {
+		return jouerTentative;
+	}
+
+	public JTextArea getCom() {
+		return com;
+	}
 }

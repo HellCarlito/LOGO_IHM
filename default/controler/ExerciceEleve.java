@@ -7,14 +7,14 @@ import view.*;
 public class ExerciceEleve
 {
 	// attributes
-    private ExerciceInterface exerciceInterface;
+    private ExerciceInterface exerciceEleveInterface;
     
     /**
      * The Constructor for the listener
      */
     public ExerciceEleve(ExerciceInterface e)
     {
-    	exerciceInterface = e;
+    	exerciceEleveInterface = e;
     }
     
     /**
@@ -23,35 +23,35 @@ public class ExerciceEleve
      */
      public void mouseEntered(MouseEvent evt)
      {
-    	 if (evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getEcrire())
+    	 if (evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelDeplacement().getEcrire())
 		 {
     		 
 		 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getNePasEcrire())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelDeplacement().getNePasEcrire())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getTourner())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelDeplacement().getTourner())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelDeplacement().getAvancer())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelDeplacement().getAvancer())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getValider())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelGestion().getValider())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getQuitter())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelGestion().getQuitter())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getUndo())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelGestion().getUndo())
     	 {
     		 
     	 }
-    	 else if(evt.getSource() == exerciceInterface.getPanelBoutons().getPanelGestion().getRedo())
+    	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutons().getPanelGestion().getRedo())
     	 {
     		 
     	 }
