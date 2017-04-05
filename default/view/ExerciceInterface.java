@@ -10,20 +10,29 @@ public class ExerciceInterface extends JPanel
 {
 	private Code codeAction;
 	private DessinExercice dessins;
-	private ZoneBouton boutons;
+	private ZoneBouton boutonsEleve;
+	private Evaluation boutonsEnseignant;
 
 	/**
 	 * Constructeur
 	 */
-	public ExerciceInterface(Exercice unExercice)
+	public ExerciceInterface(Exercice unExercice,Utilisateur unUtilisateur)
 	{
 		codeAction = new Code();
 		codeAction.add(new Code());
 		dessins = new DessinExercice(unExercice);
-		boutons = new ZoneBouton((unExercice.getTortue()));
 		JPanel zoneTravail = new JPanel(new GridLayout (0,1));
 		zoneTravail.add(dessins);
-		zoneTravail.add(boutons);
+		if (unUtilisateur instanceof Eleve)
+		{
+			boutonsEleve = new ZoneBouton(unExercice.getTortue());
+			zoneTravail.add(boutonsEleve);
+		}
+		else if (unUtilisateur instanceof Enseignant)
+		{
+			boutonsEnseignant = new Evaluation();
+			zoneTravail.add(boutonsEnseignant);
+		}
 		
 		this.setLayout(new BorderLayout());
 		this.add(zoneTravail,BorderLayout.CENTER);
@@ -40,9 +49,14 @@ public class ExerciceInterface extends JPanel
 		return dessins;
 	}
 	
-	public ZoneBouton getPanelBoutons()
+	public ZoneBouton getPanelBoutonsEleve()
 	{
-		return boutons;
+		return boutonsEleve;
+	}
+	
+	public Evaluation getPanelBoutonsEnseignant()
+	{
+		return boutonsEnseignant;
 	}
 
 	public static void main(String[] args)
@@ -52,7 +66,7 @@ public class ExerciceInterface extends JPanel
 		TortueG uneTortue = new TortueG();
 		Exercice unExercice = new Exercice("nom exercice", uneTortue, uneImage, unEnseignant);
 	    JFrame test = new JFrame();
-	    test.setContentPane(new ExerciceInterface(unExercice));
+	    test.setContentPane(new ExerciceInterface(unExercice, unEnseignant));
 	    test.setVisible(true);
 	    test.pack();
 	}
