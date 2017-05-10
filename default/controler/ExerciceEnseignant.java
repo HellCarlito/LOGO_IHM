@@ -23,15 +23,8 @@ public class ExerciceEnseignant {
      */
      public void mouseEntered(MouseEvent evt)
      {
-    	 if (evt.getSource() == exerciceEnseignantInterface.)//il faut créer la partie dans exercice interface
-		 {
-    		 
-		 }
     		
     		 
 		 
-     }
-    
-    
-    
+     }   
 }
