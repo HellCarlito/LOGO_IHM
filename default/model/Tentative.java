@@ -2,7 +2,6 @@ package model;
 import model.Action;
 import java.util.ArrayList;
   /* {author=Groupe 5, version=2017}*/
-
 import java.util.Date;
 
 /** 

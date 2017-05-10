@@ -25,19 +25,19 @@ public class ExerciceEleve
      {
     	 if (evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getEcrire())
 		 {
-    		 exerciceEleveInterface. 
+    		 exerciceEleveInterface.getMonExercice().getTortue().tracer(true);
 		 }
     	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getNePasEcrire())
     	 {
-    		 
+    		 exerciceEleveInterface.getMonExercice().getTortue().tracer(false);
     	 }
     	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getTourner())
     	 {
-    		 
+    		 exerciceEleveInterface.getMonExercice().getTortue().tourner();
     	 }
     	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelDeplacement().getAvancer())
     	 {
-    		 
+    		 exerciceEleveInterface.getMonExercice().getTortue().avancer();
     	 }
     	 else if(evt.getSource() == exerciceEleveInterface.getPanelBoutonsEleve().getPanelGestion().getValider())
     	 {

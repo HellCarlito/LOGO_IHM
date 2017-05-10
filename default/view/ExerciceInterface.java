@@ -1,10 +1,10 @@
 package view;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeCellRenderer;
+import javax.swing.tree.*;
 import javax.swing.event.*;
 import javax.swing.*;
 import java.awt.*;
 import model.*;
+import java.util.Date;
 
 public class ExerciceInterface extends JPanel
 {
@@ -45,6 +45,11 @@ public class ExerciceInterface extends JPanel
 		this.add(codeAction,BorderLayout.EAST);
 	}
 	
+	public Exercice getMonExercice()
+	{
+		return monExercice;
+	}
+	
 	public Code getPanelCode()
 	{
 		return codeAction;
@@ -71,8 +76,10 @@ public class ExerciceInterface extends JPanel
 		Icon uneImage = new ImageIcon();
 		TortueG uneTortue = new TortueG();
 		Exercice unExercice = new Exercice("nom exercice", uneTortue, uneImage, unEnseignant);
+		Date uneDate = new Date();
+		Tentative uneTentative = new Tentative(uneDate, unExercice);
 	    JFrame test = new JFrame();
-	    test.setContentPane(new ExerciceInterface(unExercice, unEnseignant));
+	    test.setContentPane(new ExerciceInterface(unExercice, unEnseignant, uneTentative));
 	    test.setVisible(true);
 	    test.pack();
 	}
