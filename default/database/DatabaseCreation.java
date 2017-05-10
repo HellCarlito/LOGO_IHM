@@ -9,15 +9,13 @@ import java.sql.Statement;
  */
 public class DatabaseCreation {
 	public static void main(String[] args) {
-		// load the sqlite-JDBC driver using the current class loader
-		// Class.forName("org.sqlite.JDC");
 
 		DatabaseConnection connectionDB = new DatabaseConnection();
 		// Connection connection = null;
 		try (Connection connection = connectionDB.connect(); Statement statement = connection.createStatement()) {
-			statement.setQueryTimeout(30); // set timeout a 30 sec.
+			statement.setQueryTimeout(30); // set timeout à 30 sec.
 
-			// Drop des tables si elles existent
+			// Drop des tables si elles existent dans la base de données
 			statement.executeUpdate("drop table if exists ACTION");
 			statement.executeUpdate("drop table if exists AGIT_SUR");
 			statement.executeUpdate("drop table if exists CLASSE");
@@ -82,7 +80,8 @@ public class DatabaseCreation {
 			 * INSERTION DE DONNEES DANS LA BASE
 			 */
 			
-			// Table ELEVE
+			// Insertion de données dans la table ELEVE
+			// Ajout de différents élèves 
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (1,'1','Yoline','Robichon');");
 
@@ -99,7 +98,8 @@ public class DatabaseCreation {
 			statement.executeUpdate("INSERT INTO ELEVE(ID_ELEVE,ID_CLASSE,PRENOM_ELEVE,NOM_ELEVE)"
 					+ " VALUES (5,'1','Charles','Tholliez');");
 			
-			// Table ENSEIGNANT
+			// Insertion de données dans la table ENSEIGNANT
+			// Ajout de différents enseignants
 			statement.executeUpdate("INSERT INTO ENSEIGNANT(ID_ENSEIGANT,NOM_ENSEIGNANT,PRENOM_ENSEIGNANT)"
 					+ " VALUES (1,'Girard','Patrick');");
 			
@@ -109,14 +109,15 @@ public class DatabaseCreation {
 			statement.executeUpdate("INSERT INTO ENSEIGNANT(ID_ENSEIGANT,NOM_ENSEIGNANT,PRENOM_ENSEIGNANT)"
 					+ " VALUES (3,'Geniet','Dominique');");
 			
-			// Table CLASSE
+			// Insertion de données dans la table CLASSE
 			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (1,'1');");
 			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (2,'2');");
 			statement.executeUpdate("INSERT INTO CLASSE(ID_CLASSE,ID_ENSEIGANT) VALUES (3,'3');");
 
 		} catch (SQLException e) {
-			// if the error message is "out of memory",
-			// it probably means no database file is found
+			// s'il y a un message d'erreur du type "out of memory",
+			// cela signifie probablement qu'il n'y a pas de fichiers 
+			// de base de données trouvé
 			System.err.println(e.getMessage());
 		}
 

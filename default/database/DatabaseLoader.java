@@ -25,7 +25,7 @@ public class DatabaseLoader {
 
 	/*
 	 * Cette methode permet de charger les eleves presents dans la base de
-	 * donnees
+	 * donnees via une requête SQL
 	 */
 	public void loadStudents() {
 		String sqlRequest = ("select * from eleve");
@@ -51,7 +51,7 @@ public class DatabaseLoader {
 
 	/*
 	 * Cette methode permet de charger les enseignants present dans la base de
-	 * donnees
+	 * donnees via une reqête SQL
 	 */
 	public void loadTeachers() {
 		String sqlRequest = "select * from enseignant";
@@ -65,7 +65,7 @@ public class DatabaseLoader {
 
 	/*
 	 * Cette methode permet de charger les classes presentes dans la base de
-	 * donnees
+	 * donnees via une requête SQL
 	 */
 	public void loadSchoolClass() {
 		String sqlRequest = "select * from classe";

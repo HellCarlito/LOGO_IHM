@@ -11,7 +11,9 @@ public class DatabaseConnection {
 	public Connection connect() {
 		java.sql.Connection connection = null;
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+			// Créé une base de données (fichier .db) avec le nom logo
+			// Via le driver jdbc
+			connection = DriverManager.getConnection("jdbc:sqlite:logo.db");
 			System.out.println("Connexion avec la base de données établie");
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());

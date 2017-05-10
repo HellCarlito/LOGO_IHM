@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/*
+ * Cette classe permet d'insérer des données dans la base de données
+ */
 public class DatabaseInsert {
 
 	DatabaseConnection connectionDB = new DatabaseConnection();
@@ -16,7 +19,8 @@ public class DatabaseInsert {
 	// }
 
 	/*
-	 * Methode pour inserer des eleves dans la base de donnees
+	 * Methode pour inserer des eleves dans la base
+	 * de donnees via une requête SQL
 	 */
 	public void insertStudent(int idEleve, int idClasse, String prenom, String nom) {
 		try (Connection connection = connectionDB.connect(); Statement stmt = connection.createStatement()) {
@@ -35,7 +39,8 @@ public class DatabaseInsert {
 	}
 
 	/*
-	 * Methode pour inserer des enseignants dans la base de donnees
+	 * Methode pour inserer des enseignants dans la base
+	 * de donnees via une requête SQL
 	 */
 	public void insertTeacher(int idEnseignant, String nomEnseignant, String prenomEnseignant) {
 		try (Connection connection = connectionDB.connect(); Statement stmt = connection.createStatement()) {
