@@ -1,17 +1,15 @@
 package view;
-
-import java.awt.GridLayout;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
 
 public class ActionEleve extends JPanel
 {
 	// Attributs
 	private JPanel boutonsMenuEleve,affichage;
 	private JPanel titre;
-	//private Icon backIcon;
+	private Icon retourIcon;
+	private JLabel label;
 	private JButton retour, faireExercice, visualiserTentative, refaireTentative, visualisationResultats;
 	
 	public ActionEleve() 

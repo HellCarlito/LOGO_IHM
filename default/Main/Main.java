@@ -21,8 +21,8 @@ public class Main extends JFrame
 	 	DatabaseCreation dbCreate = new DatabaseCreation();
 	    
 	    //Display the final panel with specifics parameters 
-	    this.add(new Menu(this));
-	    this.pack();
+	    this.add(new ChoixDebut(this));
+	    this.setSize(1200,800);
 	    this.setLocationRelativeTo(null);//place in the middle
 	    this.setVisible(true);
 	}    

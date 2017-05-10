@@ -8,8 +8,8 @@ import java.sql.Statement;
  * Cette classe permet la creation d'une base de donnees
  */
 public class DatabaseCreation {
-	public static void main(String[] args) {
-
+	
+	public DatabaseCreation() {
 		DatabaseConnection connectionDB = new DatabaseConnection();
 		// Connection connection = null;
 		try (Connection connection = connectionDB.connect(); Statement statement = connection.createStatement()) {
@@ -121,5 +121,7 @@ public class DatabaseCreation {
 			System.err.println(e.getMessage());
 		}
 
+
 	}
+
 }
