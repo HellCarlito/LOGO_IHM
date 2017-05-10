@@ -3,13 +3,16 @@ package view;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class ActionEleve extends JPanel
 {
 	// Attributs
 	private JPanel boutonsMenuEleve,affichage;
-	private JButton faireExercice, visualiserTentative, refaireTentative, visualisationResultats;
+	private JPanel titre;
+	//private Icon backIcon;
+	private JButton retour, faireExercice, visualiserTentative, refaireTentative, visualisationResultats;
 	
 	public ActionEleve() 
 	{
@@ -49,4 +52,12 @@ public class ActionEleve extends JPanel
 	public JButton getVisualiserResultat(){
 		return visualisationResultats;
 	}
+	
+	public static void main(String[] args)
+	{
+        JFrame test = new JFrame();
+        test.setContentPane(new ActionEleve());
+        test.setVisible(true);
+        test.pack();
+    }
 }

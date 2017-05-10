@@ -1,10 +1,11 @@
 package view;
-
+import controler.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.event.*;
 import javax.swing.*;
 import java.awt.*;
+import Main.*;
 
 public class Menu extends JPanel
 {
@@ -16,14 +17,23 @@ public class Menu extends JPanel
 	private JButton eleve, enseignant;
 	private JPanel tabMenuEleve, tabMenuEnseignant;
 	private JPanel affichageMenuEleve, affichageMenuEnseignant;
+	private Application evt;
+	private Main main;
 	 
 	/**
 	 * Constructeur
 	 */
-	public Menu()
+	public Menu(Main m)
 	{
+		main = m;
 		eleve = new JButton ("Eleve");
 		enseignant = new JButton ("Enseignant");
+		
+		//Listeners for buttons action
+        evt = new Application(this,main);
+        eleve.addMouseListener(evt);
+        enseignant.addMouseListener(evt);
+        
 //		//Initialisation des variables pour la page Eleve
 //		boutonEleve = new ActionMenu();
 //		titreEleve = new Titre("Eleve");
@@ -65,6 +75,11 @@ public class Menu extends JPanel
 	public JButton getEnseignant()
 	{
 		return enseignant;
+	}
+	
+	public void setMenuEleve()
+	{
+		this.add(new ActionEleve());
 	}
 	
 	public static void main(String[] args) {

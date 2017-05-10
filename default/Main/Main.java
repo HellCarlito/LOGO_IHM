@@ -1,16 +1,29 @@
 package Main;
 
-import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.*;
+import javax.swing.*;
+import view.*;
 
-import view.Menu;
-
-public class Main
+public class Main extends JFrame
 {
-	public static void main(String[] args)
+	public Main()
 	{
-		 JFrame test = new JFrame();
-	     test.setContentPane(new Menu());
-	     test.setVisible(true);
-	     test.pack();
-	}
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    this.setSize(500, 500);
+	    this.setTitle("Projet LOGO"); 
+	    
+	    //Display the final panel with specifics parameters 
+	    this.add(new Menu(this));
+	    this.pack();
+	    this.setLocationRelativeTo(null);//place in the middle
+	    this.setVisible(true);
+	}    
+	     
+	    public static void main(String[] args)
+	    {
+	        new Main();
+	    }
 }

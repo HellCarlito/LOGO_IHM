@@ -42,7 +42,6 @@ public class ActionEnseignant extends JPanel
 		this.setLayout(new GridLayout(1,0));
 		this.add(boutonsMenuEnseignant);
 		this.add(affichage);
-		
 	}
 	
 		
