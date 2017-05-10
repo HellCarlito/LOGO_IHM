@@ -6,7 +6,8 @@ import javax.swing.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class Menu extends JPanel{
+public class Menu extends JPanel
+{
 
 	/**
 	 * Attributs
